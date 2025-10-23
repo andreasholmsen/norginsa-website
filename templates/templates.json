@@ -1,0 +1,184 @@
+{
+  "templates": [
+    {
+      "name": "Portfolio Site",
+      "description": "Clean and responsive portfolio template.",
+      "folder": "portfolio-site",
+      "tags": [
+        "portfolio",
+        "personal",
+        "developer"
+      ],
+      "author": "Alex Dev",
+      "previewImage": "templates/portfolio-site/assets/images/portfolio.png",
+      "liveUrl": "templates/portfolio-site/index.html",
+      "sourceUrl": "https://github.com/webhub/portfolio-site",
+      "license": "MIT",
+      "created": "2025-06-15",
+      "featured": true,
+      "category": "Portfolio",
+      "difficulty": "Intermediate",
+      "techStack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "Business Landing Page",
+      "description": "Modern landing page for startups.",
+      "folder": "business-landing",
+      "tags": [
+        "business",
+        "landing",
+        "startup"
+      ],
+      "author": "Priya M.",
+      "previewImage": "templates/business-landing/assets/images/business.png",
+      "liveUrl": "templates/business-landing/index.html",
+      "sourceUrl": "https://github.com/webhub/business-landing",
+      "license": "MIT",
+      "created": "2025-06-20",
+      "featured": false,
+      "category": "Business",
+      "difficulty": "Beginner",
+      "techStack": [
+        "HTML",
+        "TailwindCSS"
+      ]
+    },
+    {
+      "name": "Personal Blog",
+      "description": "Minimal blog layout perfect for storytelling.",
+      "folder": "personal-blog",
+      "tags": [
+        "blog",
+        "personal",
+        "minimal"
+      ],
+      "author": "Sami Codes",
+      "previewImage": "templates/personal-blog/assets/images/blog.png",
+      "liveUrl": "templates/personal-blog/index.html",
+      "sourceUrl": "https://github.com/webhub/personal-blog",
+      "license": "MIT",
+      "created": "2025-07-01",
+      "featured": false,
+      "category": "Blog",
+      "difficulty": "Intermediate",
+      "techStack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "App Landing",
+      "description": "Simple and bold layout for mobile or web apps.",
+      "folder": "app-landing",
+      "tags": [
+        "landing",
+        "app",
+        "product"
+      ],
+      "author": "Lina Techie",
+      "previewImage": "templates/app-landing/assets/images/app.png",
+      "liveUrl": "templates/app-landing/index.html",
+      "sourceUrl": "https://github.com/webhub/app-landing",
+      "license": "MIT",
+      "created": "2025-07-05",
+      "featured": true,
+      "category": "App",
+      "difficulty": "Advanced",
+      "techStack": [
+        "HTML",
+        "TailwindCSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "Coming Soon",
+      "description": "Pre-launch page with countdown and newsletter.",
+      "folder": "coming-soon",
+      "tags": [
+        "coming soon",
+        "launch",
+        "newsletter"
+      ],
+      "author": "Dev Matrix",
+      "previewImage": "templates/coming-soon/assets/images/coming-soon.png",
+      "liveUrl": "templates/coming-soon/index.html",
+      "sourceUrl": "https://github.com/webhub/coming-soon",
+      "license": "MIT",
+      "created": "2025-07-10",
+      "featured": false,
+      "category": "Utility",
+      "difficulty": "Beginner",
+      "techStack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "Elite Tailors",
+      "description": "Best webiete for your tailoring business presence.",
+      "folder": "Elite-Tailors",
+      "tags": [
+        "tailor",
+        "bespoke",
+        "landing",
+        "business",
+        "portfolio",
+        "services"
+      ],
+      "author": "arsh0coder",
+      "previewImage": "./templates/Elite-Tailors/assets/1.png",
+      "liveUrl": "Elite-Tailors/index.html",
+      "sourceUrl": "https://github.com/webhub/Elite-Tailors",
+      "license": "MIT",
+      "created": "2025-09-07",
+      "featured": true,
+      "category": "Business",
+      "difficulty": "Beginner",
+      "techStack": [
+        "HTML",
+        "Tailwind CSS",
+        "AOS",
+        "Font Awesome",
+        "Vanilla JS",
+        "Google Fonts"
+      ]
+    },
+    {
+      "name": "Elite Motors",
+      "description": "Premium car collection website showcasing luxury, sports, and electric vehicles.",
+      "folder": "Elite-Motors",
+      "tags": [
+        "cars",
+        "luxury",
+        "sports",
+        "electric",
+        "business",
+        "automotive",
+        "portfolio",
+        "services"
+      ],
+      "author": "arsh0coder",
+      "previewImage": "./templates/Elite-Motors/assets/1.png",
+      "liveUrl": "Elite-Motors/index.html",
+      "sourceUrl": "https://github.com/webhub/Elite-Motors",
+      "license": "MIT",
+      "created": "2025-09-06",
+      "featured": true,
+      "category": "Business",
+      "difficulty": "Intermediate",
+      "techStack": [
+        "HTML",
+        "Tailwind CSS",
+        "Font Awesome",
+        "Vanilla JS",
+        "Google Fonts"
+      ]
+    }
+  ]
+}

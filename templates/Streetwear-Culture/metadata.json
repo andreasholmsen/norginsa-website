@@ -1,0 +1,38 @@
+{
+  "name": "Global Streetwear Culture",
+  "description": "A culture-first streetwear experience with atlas cards, drop radar, timeline, and a zine — built as a single-page, responsive site.",
+  "author": "x01 Open Source",
+  "created": "2025-09-20",
+  "license": "MIT",
+  "tags": ["streetwear", "culture", "zine", "timeline", "responsive", "tailwind", "vanilla-js"],
+  "technologies": ["HTML5", "Tailwind CSS", "JavaScript"],
+  "features": [
+    "Dark/light toggle",
+    "Marquee ticker",
+    "Culture atlas cards",
+    "Drop radar section",
+    "Timeline year chips",
+    "IntersectionObserver reveal",
+    "Newsletter form UI",
+    "Responsive single-page layout"
+  ],
+  "previewImage": "assets/images/streetwear-thumb.jpg",
+  "images": [
+    "assets/images/streetwear-hero.jpg",
+    "assets/images/streetwear-atlas.jpg",
+    "assets/images/streetwear-drops.jpg",
+    "assets/images/streetwear-timeline.jpg",
+    "assets/images/streetwear-zine.jpg",
+    "assets/images/streetwear-community.jpg"
+  ],
+  "liveUrl": "index.html",
+  "sourceUrl": "https://github.com/x01-open-source/webhub",
+  "sections": [
+    { "id": "home", "title": "Hero" },
+    { "id": "culture", "title": "Culture Atlas" },
+    { "id": "drops", "title": "Drop Radar" },
+    { "id": "timeline", "title": "Timeline" },
+    { "id": "zine", "title": "Zine" },
+    { "id": "community", "title": "Community" }
+  ]
+}

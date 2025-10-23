@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About – WebHub</title>
+
+  <!-- Tailwind + AOS CSS -->
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
+
+  <style>
+    /* Glowing effect for cards & buttons */
+    .glowing {
+      box-shadow: 0 16px 32px rgba(59, 130, 246, 0.16), 0 8px 8px rgba(59, 130, 246, 0.10);
+      transition: box-shadow 0.15s, transform 0.15s;
+    }
+
+    .glowing:hover,
+    .glowing:focus-visible {
+      box-shadow: 0 32px 64px rgba(59, 130, 246, 0.24), 0 16px 16px rgba(59, 130, 246, 0.12);
+      transform: translateY(-3px) scale(1.03);
+      outline-offset: 4px;
+      outline: none;
+    }
+
+    /* Fade down animation for sections */
+    .fade-down-anim {
+      animation: fadeDown 0.75s cubic-bezier(.77, 0, .175, 1) forwards;
+    }
+
+    @keyframes fadeDown {
+      from {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Floating theme toggle button fixed position */
+    #themeToggleBtn {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9999;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 relative font-sans">
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+  <script src="assets/js/getNavbar.js"></script>
+  <script>
+    // Call the function and insert into DOM
+    document.getElementById("navbar").innerHTML = getNavbarHTML();
+  </script>
+  <script src="assets/js/navbar.js"></script>
+  <div class="pt-24"></div>
+
+  <!-- Page Title -->
+  <div class="max-w-7xl mx-auto mb-12 text-center">
+    <h1 class="text-5xl font-extrabold mb-4 fade-down-anim">About WebHub</h1>
+    <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-300 text-lg leading-relaxed fade-down-anim"
+      data-aos="fade-down" data-aos-delay="100">
+      WebHub is a community-driven platform offering a wide collection of free, open-source HTML, CSS, and JavaScript
+      website templates. Our mission is to empower developers and designers worldwide by providing beautifully crafted
+      templates ready to be used and customized.
+    </p>
+  </div>
+
+  <!-- Our Mission Section -->
+  <section class="max-w-5xl mx-auto mb-20 bg-white dark:bg-gray-800 rounded-3xl glowing p-8 shadow-lg"
+    data-aos="fade-up" tabindex="0" aria-label="Our Mission">
+    <h2 class="text-3xl font-bold mb-6">Our Mission</h2>
+    <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+      To foster collaboration by providing a free, accessible repository of website templates. Whether you’re a beginner
+      or a seasoned pro, WebHub helps you find clean, modern templates to kickstart your projects or inspire your
+      creativity.
+    </p>
+  </section>
+
+  <!-- Meet The Team Section -->
+  <section class="max-w-7xl mx-auto mb-20" aria-labelledby="team-heading">
+    <h2 id="team-heading" class="text-3xl font-bold mb-12 text-center fade-down-anim">Meet The Team</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <!-- Team Member Cards -->
+      <article
+        class="bg-white dark:bg-gray-800 rounded-3xl glowing shadow p-6 flex flex-col items-center text-center focus-within:ring-4 ring-blue-400 transition"
+        tabindex="0" aria-label="Alex, Project Lead">
+        <img src="https://i.pravatar.cc/150?u=alex" alt="Alex's avatar"
+          class="w-32 h-32 rounded-full mb-4 shadow-md object-cover" />
+        <h3 class="text-xl font-semibold mb-1 text-gray-900 dark:text-gray-100">Alex T.</h3>
+        <p class="text-blue-600 font-medium mb-2">Project Lead</p>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">Passionate about open-source and building inclusive web
+          communities.</p>
+      </article>
+
+      <article
+        class="bg-white dark:bg-gray-800 rounded-3xl glowing shadow p-6 flex flex-col items-center text-center focus-within:ring-4 ring-cyan-400 transition"
+        tabindex="0" aria-label="Priya, UI Designer">
+        <img src="https://i.pravatar.cc/150?u=priya" alt="Priya's avatar"
+          class="w-32 h-32 rounded-full mb-4 shadow-md object-cover" />
+        <h3 class="text-xl font-semibold mb-1 text-gray-900 dark:text-gray-100">Priya M.</h3>
+        <p class="text-cyan-600 font-medium mb-2">UI Designer</p>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">Loves clean design and improving user experiences for all.
+        </p>
+      </article>
+
+      <article
+        class="bg-white dark:bg-gray-800 rounded-3xl glowing shadow p-6 flex flex-col items-center text-center focus-within:ring-4 ring-yellow-400 transition"
+        tabindex="0" aria-label="Jamie, Frontend Developer">
+        <img src="https://i.pravatar.cc/150?u=jamie" alt="Jamie's avatar"
+          class="w-32 h-32 rounded-full mb-4 shadow-md object-cover" />
+        <h3 class="text-xl font-semibold mb-1 text-gray-900 dark:text-gray-100">Jamie L.</h3>
+        <p class="text-yellow-500 font-medium mb-2">Frontend Developer</p>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">Coder, template creator, and open web advocate.</p>
+      </article>
+
+      <article
+        class="bg-white dark:bg-gray-800 rounded-3xl glowing shadow p-6 flex flex-col items-center text-center focus-within:ring-4 ring-pink-400 transition"
+        tabindex="0" aria-label="Carmen, Community Manager">
+        <img src="https://i.pravatar.cc/150?u=carmen" alt="Carmen's avatar"
+          class="w-32 h-32 rounded-full mb-4 shadow-md object-cover" />
+        <h3 class="text-xl font-semibold mb-1 text-gray-900 dark:text-gray-100">Carmen P.</h3>
+        <p class="text-pink-500 font-medium mb-2">Community Manager</p>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">Engages with contributors and fosters inclusive
+          collaboration.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- How to Contribute Section -->
+  <section class="max-w-5xl mx-auto mb-20 bg-white dark:bg-gray-800 rounded-3xl glowing p-8 shadow-lg"
+    data-aos="fade-up" tabindex="0" aria-label="How to Contribute">
+    <h2 class="text-3xl font-bold mb-6">How to Contribute</h2>
+    <ol class="list-decimal list-inside space-y-4 text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+      <li>Fork our GitHub repository and clone it locally.</li>
+      <li>Create a new branch for your template or improvements.</li>
+      <li>Add your template files or make modifications.</li>
+      <li>Test thoroughly for responsiveness and accessibility.</li>
+      <li>Submit a pull request with clear description and demo links.</li>
+      <li>Engage with our review process for feedback and approval.</li>
+    </ol>
+    <a href="https://github.com/x01-open-source/webhub"
+      class="mt-8 inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 rounded-lg font-semibold text-white shadow-lg transition glowing focus:outline-none focus:ring-4 focus:ring-blue-400"
+      target="_blank" rel="noopener" aria-label="Contribute templates on GitHub">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 4v16m8-8H4" />
+      </svg>
+      Contribute on GitHub
+    </a>
+  </section>
+
+  <!-- Footer Container -->
+   <div id="footer"></div>
+  <script src="assets/js/getFooter.js"></script>
+  <script>
+    // Call the function and insert into DOM
+    document.getElementById("footer").innerHTML = getFooterHTML();
+  </script>
+
+  <!-- Floating Theme Toggle Button -->
+  <button id="themeToggleBtn"
+    class="floating-btn bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-gray-700 dark:to-gray-800 text-white p-3 rounded-full shadow-xl hover:scale-110 focus:outline-none duration-200"
+    title="Toggle Theme" aria-label="Toggle Theme">
+    <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24"
+      stroke="currentColor" aria-hidden="true">
+      <circle cx="12" cy="12" r="5" stroke-width="2" />
+      <path stroke-linecap="round" stroke-width="2"
+        d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M16.36 16.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M16.36 7.64l1.42-1.42" />
+    </svg>
+    <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block" fill="none" viewBox="0 0 24 24"
+      stroke="currentColor" aria-hidden="true">
+      <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        d="M21 12.79A9 9 0 1111.21 3c.03 0 .06.01.09.01a7 7 0 0010.7 9.78z" />
+    </svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+
+    const root = document.documentElement;
+    const themeToggleBtn = document.getElementById("themeToggleBtn");
+    const iconSun = document.getElementById("icon-sun");
+    const iconMoon = document.getElementById("icon-moon");
+
+    function updateThemeIcon() {
+      if (root.classList.contains("dark")) {
+        iconSun.classList.remove("hidden");
+        iconMoon.classList.add("hidden");
+      } else {
+        iconSun.classList.add("hidden");
+        iconMoon.classList.remove("hidden");
+      }
+    }
+
+    if (localStorage.getItem("theme") === "dark") {
+      root.classList.add("dark");
+    }
+    updateThemeIcon();
+
+    themeToggleBtn.addEventListener("click", () => {
+      const toDark = root.classList.toggle("dark");
+      localStorage.setItem("theme", toDark ? "dark" : "light");
+      updateThemeIcon();
+    });
+  </script>
+</body>
+
+</html>

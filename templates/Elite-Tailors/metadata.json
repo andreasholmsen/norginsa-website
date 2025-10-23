@@ -1,0 +1,68 @@
+{
+    "name": "Elite Tailors - Premium Custom Tailoring",
+    "description": "A modern, responsive tailor shop website featuring a hero banner, premium services, interactive gallery, story-driven about section, and a contact form with smooth UX enhancements.",
+    "author": "arsh0coder",
+    "created": "2025-09-06",
+    "license": "MIT",
+    "tags": [
+        "tailor",
+        "bespoke",
+        "landing",
+        "business",
+        "portfolio",
+        "services"
+    ],
+    "technologies": [
+        "HTML",
+        "Tailwind CSS",
+        "AOS",
+        "Font Awesome",
+        "Vanilla JS",
+        "Google Fonts"
+    ],
+    "features": [
+        "Responsive hero section with parallax",
+        "Sticky navigation with active link highlighting",
+        "Mobile menu toggle",
+        "Animated service cards",
+        "Interactive gallery with modal enlargements",
+        "Back-to-top button",
+        "Smooth scrolling navigation",
+        "Contact form with inline success state"
+    ],
+    "previewImage": "assets/1.png",
+    "images": [
+        "assets/2.png",
+        "assets/3.png",
+        "assets/4.png",
+        "assets/5.png"
+    ],
+    "liveUrl": "index.html",
+    "sourceUrl": "https://github.com/webhub/Elite-Tailors",
+    "sections": [
+        {
+            "id": "home",
+            "title": "Hero"
+        },
+        {
+            "id": "services",
+            "title": "Services"
+        },
+        {
+            "id": "gallery",
+            "title": "Gallery"
+        },
+        {
+            "id": "about",
+            "title": "About"
+        },
+        {
+            "id": "contact",
+            "title": "Contact"
+        },
+        {
+            "id": "footer",
+            "title": "Footer"
+        }
+    ]
+}

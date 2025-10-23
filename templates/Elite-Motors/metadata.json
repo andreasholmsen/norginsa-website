@@ -1,0 +1,77 @@
+{
+  "name": "Elite Motors - Premium Car Collection",
+  "description": "A luxury car dealership website featuring a hero section, animated stats, premium car listings, features grid, about section, testimonials, contact form, and interactive modal for car details.",
+  "author": "arsh0coder",
+  "created": "2025-09-06",
+  "license": "MIT",
+  "tags": [
+    "cars",
+    "luxury",
+    "sports",
+    "electric",
+    "business",
+    "automotive",
+    "portfolio",
+    "services"
+  ],
+  "technologies": [
+    "HTML",
+    "Tailwind CSS",
+    "Font Awesome",
+    "Vanilla JS",
+    "Google Fonts"
+  ],
+  "features": [
+    "Hero section with animated floating car icon",
+    "Sticky navigation with smooth scrolling",
+    "Mobile menu toggle",
+    "Animated stats counters",
+    "Premium car cards with pricing and details",
+    "Modal popup for car specifications",
+    "Feature grid with hover effects",
+    "About section with call-to-action buttons",
+    "Customer testimonials with star ratings",
+    "Contact form with inline validation",
+    "Newsletter subscription in footer",
+    "Scroll-triggered animations"
+  ],
+  "previewImage": "assets/1.png",
+  "images": [
+    "assets/2.png",
+    "assets/3.png",
+    "assets/4.png",
+    "assets/5.png"
+  ],
+  "liveUrl": "index.html",
+  "sourceUrl": "https://github.com/webhub/Elite-Motors",
+  "sections": [
+    {
+      "id": "home",
+      "title": "Hero"
+    },
+    {
+      "id": "cars",
+      "title": "Car Collection"
+    },
+    {
+      "id": "features",
+      "title": "Features"
+    },
+    {
+      "id": "about",
+      "title": "About"
+    },
+    {
+      "id": "testimonials",
+      "title": "Testimonials"
+    },
+    {
+      "id": "contact",
+      "title": "Contact"
+    },
+    {
+      "id": "footer",
+      "title": "Footer"
+    }
+  ]
+}

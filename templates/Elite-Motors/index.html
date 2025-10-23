@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Motors - Premium Car Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .car-card {
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+        
+        .car-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-icon:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .stats-card {
+            transition: all 0.3s ease;
+        }
+        
+        .stats-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes pulse-glow {
+            from { box-shadow: 0 0 20px rgba(102, 126, 234, 0.4); }
+            to { box-shadow: 0 0 30px rgba(102, 126, 234, 0.8); }
+        }
+        
+        .slide-in {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.6s ease;
+        }
+        
+        .slide-in.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-car text-3xl text-blue-600"></i>
+                    <span class="text-2xl font-bold text-gray-800">Elite Motors</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Home</a>
+                    <a href="#cars" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Cars</a>
+                    <a href="#features" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Features</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">About</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button onclick="toggleMobileMenu()" class="text-gray-600 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Home</a>
+                <a href="#cars" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Cars</a>
+                <a href="#features" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Features</a>
+                <a href="#about" class="block px-3 py-2 text-gray-600 hover:text-blue-600">About</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="relative z-10 text-center text-white px-4">
+            <div class="floating mb-8">
+                <i class="fas fa-car-side text-8xl mb-6"></i>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 slide-in">
+                Experience Luxury
+                <span class="text-yellow-400">Redefined</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto slide-in">
+                Discover our premium collection of high-performance vehicles designed for the ultimate driving experience
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center slide-in">
+                <button onclick="scrollToSection('cars')" class="bg-yellow-400 text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-eye mr-2"></i>Explore Cars
+                </button>
+                <button onclick="scrollToSection('contact')" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-phone mr-2"></i>Contact Us
+                </button>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+            <div class="animate-bounce">
+                <i class="fas fa-chevron-down text-white text-2xl"></i>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="stats-card text-center p-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg text-white">
+                    <i class="fas fa-car text-4xl mb-4"></i>
+                    <div class="text-3xl font-bold mb-2" id="carCount">0</div>
+                    <div class="text-sm opacity-90">Premium Cars</div>
+                </div>
+                <div class="stats-card text-center p-6 bg-gradient-to-br from-green-500 to-green-600 rounded-lg text-white">
+                    <i class="fas fa-users text-4xl mb-4"></i>
+                    <div class="text-3xl font-bold mb-2" id="customerCount">0</div>
+                    <div class="text-sm opacity-90">Happy Customers</div>
+                </div>
+                <div class="stats-card text-center p-6 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg text-white">
+                    <i class="fas fa-award text-4xl mb-4"></i>
+                    <div class="text-3xl font-bold mb-2" id="awardCount">0</div>
+                    <div class="text-sm opacity-90">Awards Won</div>
+                </div>
+                <div class="stats-card text-center p-6 bg-gradient-to-br from-red-500 to-red-600 rounded-lg text-white">
+                    <i class="fas fa-star text-4xl mb-4"></i>
+                    <div class="text-3xl font-bold mb-2" id="ratingCount">0</div>
+                    <div class="text-sm opacity-90">5-Star Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cars Section -->
+    <section id="cars" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our Premium Collection</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Experience the perfect blend of luxury, performance, and innovation</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Car 1 -->
+                <div class="car-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative">
+                        <div class="h-64 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                            <i class="fas fa-car text-8xl text-white opacity-80"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
+                            New
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Luxury Sedan X1</h3>
+                        <p class="text-gray-600 mb-4">Ultimate comfort meets cutting-edge technology</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-4">
+                                <span class="flex items-center text-sm text-gray-500">
+                                    <i class="fas fa-tachometer-alt mr-1"></i> 300 HP
+                                </span>
+                                <span class="flex items-center text-sm text-gray-500">
+                                    <i class="fas fa-gas-pump mr-1"></i> Hybrid
+                                </span>
+                            </div>
+                            <div class="text-2xl font-bold text-blue-600">$85,000</div>
+                        </div>
+                        <button onclick="showCarDetails('Luxury Sedan X1')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
+                            <i class="fas fa-info-circle mr-2"></i>View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Car 2 -->
+                <div class="car-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative">
+                        <div class="h-64 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+                            <i class="fas fa-car text-8xl text-white opacity-80"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Hot
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Sports Coupe S2</h3>
+                        <p class="text-gray-600 mb-4">Pure adrenaline and unmatched performance</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-4">
+                                <span class="flex items-center text-sm text-gray-500">
+                                    <i class="fas fa-tachometer-alt mr-1"></i> 450 HP
+                                </span>
+                                <span class="flex items-center text-sm text-gray-500">
+                                    <i class="fas fa-gas-pump mr-1"></i> Premium
+                                </span>
+                            </div>
+                            <div class="text-2xl font-bold text-red-600">$120,000</div>
+                        </div>
+                        <button onclick="showCarDetails('Sports Coupe S2')" class="w-full bg-red-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-300">
+                            <i class="fas fa-info-circle mr-2"></i>View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Car 3 -->
+                <div class="car-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative">
+                        <div class="h-64 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                            <i class="fas fa-car text-8xl text-white opacity-80"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Eco
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Electric SUV E3</h3>
+                        <p class="text-gray-600 mb-4">Sustainable luxury for the modern family</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-4">
+                                <span class="flex items-center text-sm text-gray-500">
+                                    <i class="fas fa-battery-full mr-1"></i> 350 mi
+                                </span>
+                                <span class="flex items-center text-sm text-gray-500">
+                                    <i class="fas fa-leaf mr-1"></i> Electric
+                                </span>
+                            </div>
+                            <div class="text-2xl font-bold text-green-600">$95,000</div>
+                        </div>
+                        <button onclick="showCarDetails('Electric SUV E3')" class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-300">
+                            <i class="fas fa-info-circle mr-2"></i>View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Why Choose Elite Motors?</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">We provide exceptional service and premium vehicles</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="feature-icon bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Premium Warranty</h3>
+                    <p class="text-gray-600">Comprehensive coverage for peace of mind</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="feature-icon bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tools text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Expert Service</h3>
+                    <p class="text-gray-600">Certified technicians and genuine parts</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="feature-icon bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-credit-card text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Flexible Financing</h3>
+                    <p class="text-gray-600">Competitive rates and easy approval</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="feature-icon bg-red-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-clock text-3xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">24/7 Support</h3>
+                    <p class="text-gray-600">Round-the-clock customer assistance</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="feature-icon bg-yellow-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-map-marker-alt text-3xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Nationwide Network</h3>
+                    <p class="text-gray-600">Service centers across the country</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="feature-icon bg-indigo-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-gift text-3xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Exclusive Benefits</h3>
+                    <p class="text-gray-600">VIP treatment and special offers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">About Elite Motors</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        For over two decades, Elite Motors has been the premier destination for luxury and performance vehicles. 
+                        Our commitment to excellence and customer satisfaction has made us the trusted choice for discerning drivers.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        We offer a carefully curated selection of the world's finest automobiles, backed by exceptional service 
+                        and support that exceeds expectations.
+                    </p>
+                    <div class="flex space-x-4">
+                        <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
+                            <i class="fas fa-play mr-2"></i>Watch Video
+                        </button>
+                        <button class="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                            <i class="fas fa-download mr-2"></i>Download Brochure
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
+                        <div class="text-center">
+                            <i class="fas fa-trophy text-6xl mb-6"></i>
+                            <h3 class="text-2xl font-bold mb-4">Award-Winning Excellence</h3>
+                            <p class="text-lg opacity-90 mb-6">
+                                Recognized for outstanding service and customer satisfaction
+                            </p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold">25+</div>
+                                    <div class="text-sm opacity-90">Years Experience</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold">10K+</div>
+                                    <div class="text-sm opacity-90">Happy Customers</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Real experiences from satisfied customers</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                            JD
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">John Davis</h4>
+                            <p class="text-sm text-gray-600">Business Executive</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "Elite Motors exceeded my expectations. The service was impeccable and the car quality is outstanding."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                            SM
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Sarah Miller</h4>
+                            <p class="text-sm text-gray-600">Tech Entrepreneur</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "The electric SUV I purchased is perfect for my lifestyle. Great performance and eco-friendly!"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                            MW
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Mike Wilson</h4>
+                            <p class="text-sm text-gray-600">Sports Enthusiast</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "The sports coupe is a dream come true. Incredible handling and power. Highly recommended!"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Ready to experience luxury? Contact us today</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Address</h4>
+                                <p class="text-gray-600">123 Luxury Drive, Premium City, PC 12345</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Phone</h4>
+                                <p class="text-gray-600">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Email</h4>
+                                <p class="text-gray-600">info@elitemotors.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Hours</h4>
+                                <p class="text-gray-600">Mon-Fri: 9AM-8PM, Sat: 10AM-6PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Send us a Message</h3>
+                    <form onsubmit="submitForm(event)">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-car text-2xl text-blue-600"></i>
+                        <span class="text-xl font-bold">Elite Motors</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Your premier destination for luxury and performance vehicles.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a></li>
+                        <li><a href="#cars" class="text-gray-400 hover:text-white transition-colors duration-300">Cars</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors duration-300">Features</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Financing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Maintenance</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Warranty</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Trade-In</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest offers</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 rounded-l-lg text-gray-900">
+                        <button class="bg-blue-600 px-4 py-2 rounded-r-lg hover:bg-blue-700 transition-colors duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Elite Motors. All rights reserved. | Privacy Policy | Terms of Service
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Car Details -->
+    <div id="carModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 id="modalTitle" class="text-2xl font-bold text-gray-800"></h3>
+                    <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div id="modalContent" class="text-gray-600">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+                <div class="mt-6 flex space-x-4">
+                    <button onclick="closeModal()" class="flex-1 bg-gray-300 text-gray-800 py-3 rounded-lg font-semibold hover:bg-gray-400 transition-colors duration-300">
+                        Close
+                    </button>
+                    <button onclick="scheduleTestDrive()" class="flex-1 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
+                        <i class="fas fa-calendar mr-2"></i>Schedule Test Drive
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animate stats on scroll
+        function animateStats() {
+            const stats = [
+                { element: 'carCount', target: 150, duration: 2000 },
+                { element: 'customerCount', target: 10000, duration: 2000 },
+                { element: 'awardCount', target: 25, duration: 2000 },
+                { element: 'ratingCount', target: 98, duration: 2000 }
+            ];
+
+            stats.forEach(stat => {
+                const element = document.getElementById(stat.element);
+                const start = 0;
+                const increment = stat.target / (stat.duration / 16);
+                let current = start;
+
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= stat.target) {
+                        current = stat.target;
+                        clearInterval(timer);
+                    }
+                    element.textContent = Math.floor(current).toLocaleString();
+                }, 16);
+            });
+        }
+
+        // Scroll animations
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.slide-in, .fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scroll to section
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Car details modal
+        function showCarDetails(carName) {
+            const modal = document.getElementById('carModal');
+            const title = document.getElementById('modalTitle');
+            const content = document.getElementById('modalContent');
+            
+            title.textContent = carName;
+            
+            const carDetails = {
+                'Luxury Sedan X1': {
+                    price: '$85,000',
+                    engine: '3.0L V6 Hybrid',
+                    power: '300 HP',
+                    transmission: '8-Speed Automatic',
+                    features: ['Premium Leather Interior', 'Advanced Safety Suite', 'Panoramic Sunroof', 'Wireless Charging', 'Premium Sound System'],
+                    description: 'The Luxury Sedan X1 represents the pinnacle of automotive excellence, combining sophisticated design with cutting-edge technology.'
+                },
+                'Sports Coupe S2': {
+                    price: '$120,000',
+                    engine: '4.0L V8 Twin-Turbo',
+                    power: '450 HP',
+                    transmission: '7-Speed Dual-Clutch',
+                    features: ['Carbon Fiber Interior', 'Track Mode', 'Launch Control', 'Brembo Brakes', 'Sport Exhaust'],
+                    description: 'The Sports Coupe S2 delivers pure driving exhilaration with unmatched performance and precision engineering.'
+                },
+                'Electric SUV E3': {
+                    price: '$95,000',
+                    engine: 'Dual Motor Electric',
+                    power: '400 HP',
+                    transmission: 'Single-Speed',
+                    features: ['350-Mile Range', 'Fast Charging', 'Autonomous Driving', 'Premium Interior', 'Advanced Infotainment'],
+                    description: 'The Electric SUV E3 combines sustainable technology with luxury, offering the perfect blend of performance and environmental responsibility.'
+                }
+            };
+            
+            const car = carDetails[carName];
+            content.innerHTML = `
+                <div class="space-y-4">
+                    <p class="text-lg">${car.description}</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800">Engine</h4>
+                            <p class="text-gray-600">${car.engine}</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800">Power</h4>
+                            <p class="text-gray-600">${car.power}</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800">Transmission</h4>
+                            <p class="text-gray-600">${car.transmission}</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800">Price</h4>
+                            <p class="text-blue-600 font-bold">${car.price}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Key Features:</h4>
+                        <ul class="list-disc list-inside space-y-1 text-gray-600">
+                            ${car.features.map(feature => `<li>${feature}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('carModal');
+            modal.classList.add('hidden');
+        }
+
+        function scheduleTestDrive() {
+            alert('Test drive scheduling feature coming soon! Please contact us directly to schedule your test drive.');
+            closeModal();
+        }
+
+        // Form submission
+        function submitForm(event) {
+            event.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            event.target.reset();
+        }
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Start stats animation after a delay
+            setTimeout(animateStats, 1000);
+            
+            // Add scroll event listener
+            window.addEventListener('scroll', handleScrollAnimations);
+            
+            // Initial check for elements in view
+            handleScrollAnimations();
+            
+            // Add pulse glow effect to hero buttons
+            const heroButtons = document.querySelectorAll('.hero-bg button');
+            heroButtons.forEach(button => {
+                button.classList.add('pulse-glow');
+            });
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('carModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

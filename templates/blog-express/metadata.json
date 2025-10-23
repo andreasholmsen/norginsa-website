@@ -1,0 +1,28 @@
+{
+  "name": "Blog Express",
+  "description": "Minimalist blog template for writers and storytellers.",
+  "author": "Ravi Patel",
+  "created": "2025-05-22",
+  "license": "MIT",
+  "tags": ["blog", "minimal", "content", "clean"],
+  "technologies": ["HTML", "Tailwind CSS"],
+  "features": [
+    "Featured post banner",
+    "Author bylines",
+    "Scroll reveal animations",
+    "Mobile-first layout"
+  ],
+  "previewImage": "assets/images/blog-thumb.jpg",
+  "images": [
+    "assets/images/blog-hero.jpg",
+    "assets/images/blog-post.jpg",
+    "assets/images/blog-footer.jpg"
+  ],
+  "liveUrl": "index.html",
+  "sourceUrl": "https://github.com/webhub/blog-express",
+  "sections": [
+    { "id": "featured", "title": "Featured Post" },
+    { "id": "articles", "title": "Articles" },
+    { "id": "about", "title": "About the Author" }
+  ]
+}

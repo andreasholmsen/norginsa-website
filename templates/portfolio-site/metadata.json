@@ -1,0 +1,29 @@
+{
+  "name": "Portfolio Site",
+  "description": "A clean, responsive portfolio template for developers and creatives.",
+  "author": "Alex Dev",
+  "created": "2025-06-15",
+  "license": "MIT",
+  "tags": ["portfolio", "developer", "minimal", "responsive"],
+  "technologies": ["HTML5", "Tailwind CSS", "JavaScript"],
+  "features": [
+    "Responsive grid layout",
+    "Dark/light toggle",
+    "Animated transitions",
+    "Contact form"
+  ],
+  "previewImage": "assets/images/portfolio-thumb.jpg",
+  "images": [
+    "assets/images/portfolio-hero.jpg",
+    "assets/images/portfolio-projects.jpg",
+    "assets/images/portfolio-contact.jpg"
+  ],
+  "liveUrl": "index.html",
+  "sourceUrl": "https://github.com/webhub/portfolio-site",
+  "sections": [
+    { "id": "hero", "title": "Hero" },
+    { "id": "projects", "title": "Projects" },
+    { "id": "about", "title": "About" },
+    { "id": "contact", "title": "Contact" }
+  ]
+}
