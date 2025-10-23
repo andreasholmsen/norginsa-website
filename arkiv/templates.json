@@ -1,18 +1,17 @@
 {
   "templates": [
     {
-      "name": "Portfolio Site",
-      "description": "Clean and responsive portfolio template.",
+      "name": "Artikkel #1",
+      "description": "Kort introduksjon",
       "folder": "portfolio-site",
       "tags": [
-        "portfolio",
-        "personal",
-        "developer"
+        "Studenthistorier",
+        "Tips & Triks"
       ],
-      "author": "Alex Dev",
-      "previewImage": "templates/portfolio-site/assets/images/portfolio.png",
-      "liveUrl": "templates/portfolio-site/index.html",
-      "sourceUrl": "https://github.com/webhub/portfolio-site",
+      "author": "Andreas Holmsen",
+      "previewImage": "assets/images/artikkel1/artikkel1preview.jpg",
+      "liveUrl": "arkiv/portfolio-site/index.html",
+      "sourceUrl": "https://github.com/NORGINSA/portfolio-site",
       "license": "MIT",
       "created": "2025-06-15",
       "featured": true,
@@ -25,18 +24,16 @@
       ]
     },
     {
-      "name": "Business Landing Page",
-      "description": "Modern landing page for startups.",
+      "name": "Artikkel #2",
+      "description": "Kort introduksjon",
       "folder": "business-landing",
       "tags": [
-        "business",
-        "landing",
-        "startup"
+        "Annet"
       ],
       "author": "Priya M.",
-      "previewImage": "templates/business-landing/assets/images/business.png",
-      "liveUrl": "templates/business-landing/index.html",
-      "sourceUrl": "https://github.com/webhub/business-landing",
+      "previewImage": "assets/images/artikkel2/artikkel2preview.jpg",
+      "liveUrl": "arkiv/business-landing/index.html",
+      "sourceUrl": "https://github.com/NORGINSA/business-landing",
       "license": "MIT",
       "created": "2025-06-20",
       "featured": false,
@@ -48,18 +45,17 @@
       ]
     },
     {
-      "name": "Personal Blog",
-      "description": "Minimal blog layout perfect for storytelling.",
+      "name": "Artikkel #3",
+      "description": "Kort introduksjon",
       "folder": "personal-blog",
       "tags": [
-        "blog",
-        "personal",
-        "minimal"
+        "Sosiale Arrangementer",
+        "Tradisjoner"
       ],
       "author": "Sami Codes",
-      "previewImage": "templates/personal-blog/assets/images/blog.png",
-      "liveUrl": "templates/personal-blog/index.html",
-      "sourceUrl": "https://github.com/webhub/personal-blog",
+      "previewImage": "assets/images/artikkel3/artikkel3preview.jpg",
+      "liveUrl": "arkiv/personal-blog/index.html",
+      "sourceUrl": "https://github.com/NORGINSA/personal-blog",
       "license": "MIT",
       "created": "2025-07-01",
       "featured": false,
@@ -81,9 +77,9 @@
         "product"
       ],
       "author": "Lina Techie",
-      "previewImage": "templates/app-landing/assets/images/app.png",
-      "liveUrl": "templates/app-landing/index.html",
-      "sourceUrl": "https://github.com/webhub/app-landing",
+      "previewImage": "arkiv/app-landing/assets/images/app.png",
+      "liveUrl": "arkiv/app-landing/index.html",
+      "sourceUrl": "https://github.com/NORGINSA/app-landing",
       "license": "MIT",
       "created": "2025-07-05",
       "featured": true,
@@ -105,9 +101,9 @@
         "newsletter"
       ],
       "author": "Dev Matrix",
-      "previewImage": "templates/coming-soon/assets/images/coming-soon.png",
-      "liveUrl": "templates/coming-soon/index.html",
-      "sourceUrl": "https://github.com/webhub/coming-soon",
+      "previewImage": "arkiv/coming-soon/assets/images/coming-soon.png",
+      "liveUrl": "arkiv/coming-soon/index.html",
+      "sourceUrl": "https://github.com/NORGINSA/coming-soon",
       "license": "MIT",
       "created": "2025-07-10",
       "featured": false,
@@ -132,9 +128,9 @@
         "services"
       ],
       "author": "arsh0coder",
-      "previewImage": "./templates/Elite-Tailors/assets/1.png",
+      "previewImage": "./arkiv/Elite-Tailors/assets/1.png",
       "liveUrl": "Elite-Tailors/index.html",
-      "sourceUrl": "https://github.com/webhub/Elite-Tailors",
+      "sourceUrl": "https://github.com/NORGINSA/Elite-Tailors",
       "license": "MIT",
       "created": "2025-09-07",
       "featured": true,
@@ -164,9 +160,9 @@
         "services"
       ],
       "author": "arsh0coder",
-      "previewImage": "./templates/Elite-Motors/assets/1.png",
+      "previewImage": "./arkiv/Elite-Motors/assets/1.png",
       "liveUrl": "Elite-Motors/index.html",
-      "sourceUrl": "https://github.com/webhub/Elite-Motors",
+      "sourceUrl": "https://github.com/NORGINSA/Elite-Motors",
       "license": "MIT",
       "created": "2025-09-06",
       "featured": true,

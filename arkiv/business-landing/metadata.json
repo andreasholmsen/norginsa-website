@@ -19,7 +19,7 @@
     "assets/images/bg.jpg"
   ],
   "liveUrl": "index.html",
-  "sourceUrl": "https://github.com/webhub/business-landing",
+  "sourceUrl": "https://github.com/NORGINSA/business-landing",
   "sections": [
     { "id": "hero", "title": "Hero" },
     { "id": "features", "title": "Features" },

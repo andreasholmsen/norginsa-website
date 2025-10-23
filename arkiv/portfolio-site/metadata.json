@@ -19,7 +19,7 @@
     "assets/images/portfolio-contact.jpg"
   ],
   "liveUrl": "index.html",
-  "sourceUrl": "https://github.com/webhub/portfolio-site",
+  "sourceUrl": "https://github.com/NORGINSA/portfolio-site",
   "sections": [
     { "id": "hero", "title": "Hero" },
     { "id": "projects", "title": "Projects" },
