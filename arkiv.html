@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Templates – NORGINSA</title>
+  <title>Arkiv – NORGINSA</title>
 
   <!-- Tailwind + AOS CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -51,8 +51,8 @@
   <div class="pt-24"></div>
 
   <section class="text-center py-12 bg-red-600 text-white">
-    <h1 class="text-4xl font-bold mb-2">Explore All Templates</h1>
-    <p class="text-lg">Filter and discover website templates from our open-source collection</p>
+    <h1 class="text-4xl font-bold mb-2">Søk i Arkivet</h1>
+    <p class="text-lg">Finn alt fra gamle studenthistorier ogtips til første skoledag til de snodigste tradisjonene i Toulouse!</p>
   </section>
 
   <!-- Main 2-column Layout -->
@@ -65,7 +65,7 @@
       <div id="tagFilters" class="flex flex-wrap gap-2 mb-4"></div>
       <select id="authorFilter"
         class="mb-2 px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800">
-        <option value="">All Authors</option>
+        <option value="">Skrevet av</option>
       </select>
       <select id="licenseFilter"
         class="mb-2 px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800">
@@ -83,7 +83,7 @@
         class="mb-2 px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800" />
       <button id="applyFiltersBtn"
         class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition font-semibold shadow">
-        Apply Filters
+        Søk i arkivet
       </button>
     </aside>
 
@@ -350,11 +350,7 @@
                 <div class="flex gap-3">
                   <a href="arkiv-details.html?id=${t.folder}" target="_blank"
                     class="flex-1 bg-gradient-to-r from-red-600 to-red-500 text-white text-center px-4 py-2 rounded-lg shadow-md hover:from-red-700 hover:to-red-600 transition-all duration-200">
-                    🚀 Explore
-                  </a>
-                  <a href="${t.sourceUrl}" target="_blank"
-                    class="flex-1 bg-gradient-to-r from-gray-700 to-gray-600 text-white text-center px-4 py-2 rounded-lg shadow-md hover:from-gray-800 hover:to-gray-700 transition-all duration-200">
-                    📦 Source
+                    Les mer
                   </a>
                 </div>
               </div>

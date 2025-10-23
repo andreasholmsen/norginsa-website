@@ -19,15 +19,15 @@ function getNavbarHTML() {
             class="px-2 py-1 rounded transition hover:text-red-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-red-400 text-gray-700 dark:text-gray-100">Arkiv</a>
           <a href="about.html"
             class="px-2 py-1 rounded transition hover:text-red-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-red-400 text-gray-700 dark:text-gray-100">Om NORGINSA</a>
-          <a href="https://wiki.etud.insa-toulouse.fr/books/1a/page/besta-ditt-forste-norginsa-ar-starter-pack" target="_blank" rel="noopener"
+          <a href="https://wiki.etud.insa-toulouse.fr/books/1a/page/besta-ditt-forste-norginsa-ar-starter-pack"  rel="noopener"
             class="px-2 py-1 rounded transition hover:text-red-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-red-400 text-gray-700 dark:text-gray-100 flex items-center gap-1 text-sm sm:text-base">
             Wiki
           </a>
-          <a href="https://wiki.etud.insa-toulouse.fr/books/1a/page/besta-ditt-forste-norginsa-ar-starter-pack" target="_blank" rel="noopener"
+          <a href="kontakt.html" rel="noopener"
             class="px-2 py-1 rounded transition hover:text-red-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-red-400 text-gray-700 dark:text-gray-100 flex items-center gap-1 text-sm sm:text-base">
             Kontakt Oss
           </a>
-          <a href="https://utdanning.no/tema/utdanning_i_utlandet/ingeniorstudier_i_toulouse" target="_blank" rel="noopener"
+          <a href="https://utdanning.no/tema/utdanning_i_utlandet/ingeniorstudier_i_toulouse"  rel="noopener"
             class="ml-2 bg-gradient-to-r from-red-600 to-rose-500 text-white px-4 sm:px-5 py-1.5 sm:py-2 rounded-lg shadow hover:from-red-700 hover:to-rose-600 font-semibold transition duration-200 flex items-center gap-1 sm:gap-2 focus:outline-none focus:ring-2 focus:ring-red-300 text-sm sm:text-base">
             SØK HER
           </a>
@@ -83,7 +83,7 @@ function getNavbarHTML() {
           class="block px-3 py-1.5 rounded hover:bg-red-100 dark:hover:bg-gray-700 text-sm">Templates</a>
         <a href="about.html"
           class="block px-3 py-1.5 rounded hover:bg-red-100 dark:hover:bg-gray-700 text-sm">About</a>
-        <a href="https://utdanning.no/tema/utdanning_i_utlandet/ingeniorstudier_i_toulouse" target="_blank" rel="noopener"
+        <a href="https://utdanning.no/tema/utdanning_i_utlandet/ingeniorstudier_i_toulouse"  rel="noopener"
           class="flex items-center gap-1 px-3 py-1.5 rounded hover:bg-red-100 dark:hover:bg-gray-700 text-sm">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
             aria-hidden="true">
@@ -92,7 +92,7 @@ function getNavbarHTML() {
           </svg>
           GitHub
         </a>
-        <a href="https://utdanning.no/tema/utdanning_i_utlandet/ingeniorstudier_i_toulouse" target="_blank" rel="noopener"
+        <a href="https://utdanning.no/tema/utdanning_i_utlandet/ingeniorstudier_i_toulouse"  rel="noopener"
           class="block bg-gradient-to-r from-red-600 to-rose-500 text-white px-4 py-1.5 rounded-lg shadow hover:from-red-700 hover:to-rose-600 font-semibold transition duration-200 mt-2 text-sm">
           <svg class="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="M12 4v16m8-8H4" />

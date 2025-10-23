@@ -29,10 +29,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           </p>
           <div class="mt-auto space-y-3">
             <a href="${template.liveUrl}" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-red-600 to-rose-500 hover:from-red-700 hover:to-rose-600 text-white text-center px-5 py-3 rounded-xl font-semibold shadow-lg transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-rose-400" aria-label="Explore ${template.name} live demo">
-              🚀 Explore
-            </a>
-            <a href="${template.sourceUrl}" target="_blank" rel="noopener noreferrer" class="block text-center text-red-600 dark:text-red-400 underline hover:text-red-800 dark:hover:text-red-300 text-sm transition focus:outline-none focus:ring-2 focus:ring-red-400 rounded" aria-label="View ${template.name} source code">
-              📦 Source Code
+              Les mer
             </a>
           </div>
         </div>
