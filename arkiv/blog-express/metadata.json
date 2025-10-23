@@ -19,7 +19,7 @@
     "assets/images/blog-footer.jpg"
   ],
   "liveUrl": "index.html",
-  "sourceUrl": "https://github.com/webhub/blog-express",
+  "sourceUrl": "https://github.com/NORGINSA/blog-express",
   "sections": [
     { "id": "featured", "title": "Featured Post" },
     { "id": "articles", "title": "Articles" },

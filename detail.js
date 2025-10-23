@@ -19,7 +19,7 @@ if (!folder) {
   throw new Error("Missing folder parameter.");
 }
 
-fetch(`templates/${folder}/templates.json`)
+fetch(`arkiv/${folder}/templates.json`)
   .then(res => {
     if (!res.ok) {
       throw new Error("Failed to fetch templates.json");
@@ -39,7 +39,7 @@ fetch(`templates/${folder}/templates.json`)
     details.image.src = template.previewImage;
 
     details.tags.innerHTML = template.tags.map(tag =>
-      `<span class="bg-blue-100 text-blue-700 dark:bg-blue-700 dark:text-white px-3 py-1 rounded-full">${tag}</span>`
+      `<span class="bg-red-100 text-red-700 dark:bg-red-700 dark:text-white px-3 py-1 rounded-full">${tag}</span>`
     ).join(" ");
 
     details.meta.innerHTML = `

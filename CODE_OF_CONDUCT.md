@@ -20,7 +20,7 @@ Examples of unacceptable behavior:
 
 ## 📢 Enforcement
 
-Instances of abusive behavior may be reported by contacting the maintainers at `webhubopensource@gmail.com`. All complaints will be reviewed and investigated.
+Instances of abusive behavior may be reported by contacting the maintainers at `NORGINSAopensource@gmail.com`. All complaints will be reviewed and investigated.
 
 ---
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Template Details – WebHub</title>
+  <title>Template Details – NORGINSA</title>
 
   <!-- Tailwind + Required Styles -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -27,7 +27,7 @@
       position: relative;
       overflow: hidden;
       border-radius: 0.75rem; /* rounded-lg */
-      box-shadow: 0 10px 15px rgba(59, 130, 246, 0.2);
+      box-shadow: 0 10px 15px rgba(246, 59, 59, 0.2);
     }
 
     /* Carousel inner wrapper */
@@ -48,7 +48,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(59, 130, 246, 0.8);
+      background: rgba(246, 59, 59, 0.8);
       color: white;
       border: none;
       border-radius: 9999px;
@@ -63,7 +63,7 @@
     }
     .carousel-btn:hover,
     .carousel-btn:focus {
-      background: rgba(59, 130, 246, 1);
+      background: rgb(246, 59, 59);
       outline: none;
     }
     .carousel-btn.prev {
@@ -104,7 +104,7 @@
   <button
     id="themeToggleBtn"
     aria-label="Toggle Theme"
-    class="floating-btn bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-gray-700 dark:to-gray-800 p-3 rounded-full shadow-xl hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-400 transition duration-200"
+    class="floating-btn bg-gradient-to-r from-red-600 to-rose-500 dark:from-gray-700 dark:to-gray-800 p-3 rounded-full shadow-xl hover:scale-110 focus:outline-none focus:ring-4 focus:ring-red-400 transition duration-200"
     type="button"
   >
     <svg
@@ -218,7 +218,7 @@
             }" role="group" aria-roledescription="slide" aria-label="Slide ${
                 idx + 1
               } of ${images.length}">
-              <img src="templates/${folder}/${img}" alt="${altText} screenshot ${
+              <img src="arkiv/${folder}/${img}" alt="${altText} screenshot ${
                 idx + 1
               }" class="w-full object-cover rounded-lg" loading="lazy" />
             </div>`
@@ -230,7 +230,7 @@
       </div>`;
     }
 
-    fetch(`templates/${folder}/metadata.json`)
+    fetch(`arkiv/${folder}/metadata.json`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch metadata");
         return res.json();
@@ -255,7 +255,7 @@
                 ${data.tags
                   .map(
                     (tag) => `
-                  <span class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-white px-3 py-1 rounded-full text-sm mr-2">${tag}</span>
+                  <span class="inline-block bg-red-100 text-red-800 dark:bg-red-800 dark:text-white px-3 py-1 rounded-full text-sm mr-2">${tag}</span>
                 `
                   )
                   .join('')}
@@ -276,7 +276,7 @@
             </section>
 
             <section class="flex gap-4">
-              <a href="templates/${folder}/${data.liveUrl}" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400" rel="noopener">
+              <a href="arkiv/${folder}/${data.liveUrl}" target="_blank" class="bg-red-600 text-white px-6 py-3 rounded hover:bg-red-700 transition font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-red-400" rel="noopener">
                 Live Preview
               </a>
               <a href="${data.sourceUrl}" target="_blank" class="bg-gray-700 text-white px-6 py-3 rounded hover:bg-gray-800 transition font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-gray-700" rel="noopener">

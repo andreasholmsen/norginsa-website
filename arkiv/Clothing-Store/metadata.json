@@ -23,7 +23,7 @@
     "assets/images/moda-cart.jpg"
   ],
   "liveUrl": "index.html",
-  "sourceUrl": "https://github.com/x01-open-source/webhub",
+  "sourceUrl": "https://github.com/x01-open-source/NORGINSA",
   "sections": [
     { "id": "home", "title": "Hero" },
     { "id": "controls", "title": "Filters & Sort" },
