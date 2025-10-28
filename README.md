@@ -1,6 +1,49 @@
 
 # NORGINSA – Nettside
 
+Hva som mangler:
+
+- [ ] Fikse visning av "featured articles" på hjemmesiden på mobil - på visse enheter fungerer det ikke.
+- [ ] Legge til oppsummering av NORGINSA-programmet på /about.html siden
+- [ ] Legge til bidragsytere på /about.html siden (utifra hvor mange som faktisk bidrar til siden)
+- [ ] Fikse tags i /arkiv.html, slik at man kan sortere etter artikler som inneholder tags
+- [ ] Passe på at tekstboksen i /arkiv.html er trygg og ikke kan ødelegge siden
+- [ ] Legge til bilde av alle studentene fra 17. Mai på hjemmesiden.
+- [ ] Generellt sett skrive om tekster til å bli bedre ved behov - spesielt teksten på hjemmesiden.
+- [ ] Fikse slik at bildet på hjemmesiden er like bredt som boksen rett over på desktop
+- [ ] Skrive masse artikler!
+    - [ ] TEKNA-Toulouse
+    - [ ] ANSA-Toulouse
+    - [ ] Søknadsprosessen
+    - [ ] Førsteklasse
+    - [ ] MIC
+    - [ ] IMACS
+    - [ ] IC
+    - [ ] ICBE
+    - [ ] Vintur
+    - [ ] Julebord
+    - [ ] PYRRA
+    - [ ] 17. Mai
+    - [ ] Sommerlunsj
+    - [ ] Utveksling / Dobbeldiplom
+    - [ ] PK
+    - [ ] BOOM
+    - [ ] Barer i Toulouse
+    - [ ] Afterworks
+    - [ ] Feriesystem
+    - [ ] Stage / Internship
+    - [ ] AS
+    - [ ] RU
+    - [ ] Campus-Appen
+    - [ ] Nyttige lenker (kopi av wiki-siden ish)
+    - [ ] Quoi de nøff
+    - [ ] Bosituasjonen på campus
+    - [ ] Bosituasjonen i byen
+    - [ ] Chazel
+    - [ ] Hebras
+    - [ ] Intervjue tidligere NORGINSA for erfaringer
+
+
 ## 🧱 Prosjektstruktur
 
 ```bash
