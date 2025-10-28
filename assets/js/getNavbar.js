@@ -6,7 +6,7 @@ function getNavbarHTML() {
     <div class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
       <div class="flex justify-between items-center py-3 sm:py-4">
         <!-- Brand / Logo -->
-        <a href="#"
+        <a
           class="flex items-center gap-1.5 sm:gap-2 text-xl sm:text-2xl font-extrabold text-red-600 hover:text-red-700 transition tracking-tight select-none"
           aria-label="Go to homepage">
           <span>NORGINSA</span>
