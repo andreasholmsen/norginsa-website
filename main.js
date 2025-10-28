@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             ${template.tags.map(tag => `<span class="bg-red-100 dark:bg-red-700 text-red-700 dark:text-red-100 text-xs font-semibold px-3 py-1 rounded-full select-none">${tag}</span>`).join('')}
           </div>
           <p class="text-xs text-gray-500 dark:text-gray-400 mb-5 truncate" aria-label="By author, created date and license">
-            By <strong>${template.author}</strong> · ${template.created} · <span class="capitalize">${template.license}</span>
+            By <strong>${template.author}</strong> · ${template.created}
           </p>
           <div class="mt-auto space-y-3">
             <a href="${template.liveUrl}" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-red-600 to-rose-500 hover:from-red-700 hover:to-rose-600 text-white text-center px-5 py-3 rounded-xl font-semibold shadow-lg transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-rose-400" aria-label="Explore ${template.name} live demo">

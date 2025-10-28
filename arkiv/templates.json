@@ -12,16 +12,8 @@
       "previewImage": "assets/images/artikkel1/artikkel1preview.jpg",
       "liveUrl": "arkiv/portfolio-site/index.html",
       "sourceUrl": "https://github.com/NORGINSA/portfolio-site",
-      "license": "MIT",
       "created": "2025-06-15",
-      "featured": true,
-      "category": "Portfolio",
-      "difficulty": "Intermediate",
-      "techStack": [
-        "HTML",
-        "CSS",
-        "JavaScript"
-      ]
+      "featured": true
     },
     {
       "name": "Artikkel #2",
@@ -34,15 +26,8 @@
       "previewImage": "assets/images/artikkel2/artikkel2preview.jpg",
       "liveUrl": "arkiv/business-landing/index.html",
       "sourceUrl": "https://github.com/NORGINSA/business-landing",
-      "license": "MIT",
       "created": "2025-06-20",
-      "featured": false,
-      "category": "Business",
-      "difficulty": "Beginner",
-      "techStack": [
-        "HTML",
-        "TailwindCSS"
-      ]
+      "featured": false
     },
     {
       "name": "Artikkel #3",
@@ -56,125 +41,8 @@
       "previewImage": "assets/images/artikkel3/artikkel3preview.jpg",
       "liveUrl": "arkiv/personal-blog/index.html",
       "sourceUrl": "https://github.com/NORGINSA/personal-blog",
-      "license": "MIT",
       "created": "2025-07-01",
-      "featured": false,
-      "category": "Blog",
-      "difficulty": "Intermediate",
-      "techStack": [
-        "HTML",
-        "CSS",
-        "JavaScript"
-      ]
-    },
-    {
-      "name": "App Landing",
-      "description": "Simple and bold layout for mobile or web apps.",
-      "folder": "app-landing",
-      "tags": [
-        "landing",
-        "app",
-        "product"
-      ],
-      "author": "Lina Techie",
-      "previewImage": "arkiv/app-landing/assets/images/app.png",
-      "liveUrl": "arkiv/app-landing/index.html",
-      "sourceUrl": "https://github.com/NORGINSA/app-landing",
-      "license": "MIT",
-      "created": "2025-07-05",
-      "featured": true,
-      "category": "App",
-      "difficulty": "Advanced",
-      "techStack": [
-        "HTML",
-        "TailwindCSS",
-        "JavaScript"
-      ]
-    },
-    {
-      "name": "Coming Soon",
-      "description": "Pre-launch page with countdown and newsletter.",
-      "folder": "coming-soon",
-      "tags": [
-        "coming soon",
-        "launch",
-        "newsletter"
-      ],
-      "author": "Dev Matrix",
-      "previewImage": "arkiv/coming-soon/assets/images/coming-soon.png",
-      "liveUrl": "arkiv/coming-soon/index.html",
-      "sourceUrl": "https://github.com/NORGINSA/coming-soon",
-      "license": "MIT",
-      "created": "2025-07-10",
-      "featured": false,
-      "category": "Utility",
-      "difficulty": "Beginner",
-      "techStack": [
-        "HTML",
-        "CSS",
-        "JavaScript"
-      ]
-    },
-    {
-      "name": "Elite Tailors",
-      "description": "Best webiete for your tailoring business presence.",
-      "folder": "Elite-Tailors",
-      "tags": [
-        "tailor",
-        "bespoke",
-        "landing",
-        "business",
-        "portfolio",
-        "services"
-      ],
-      "author": "arsh0coder",
-      "previewImage": "./arkiv/Elite-Tailors/assets/1.png",
-      "liveUrl": "Elite-Tailors/index.html",
-      "sourceUrl": "https://github.com/NORGINSA/Elite-Tailors",
-      "license": "MIT",
-      "created": "2025-09-07",
-      "featured": true,
-      "category": "Business",
-      "difficulty": "Beginner",
-      "techStack": [
-        "HTML",
-        "Tailwind CSS",
-        "AOS",
-        "Font Awesome",
-        "Vanilla JS",
-        "Google Fonts"
-      ]
-    },
-    {
-      "name": "Elite Motors",
-      "description": "Premium car collection website showcasing luxury, sports, and electric vehicles.",
-      "folder": "Elite-Motors",
-      "tags": [
-        "cars",
-        "luxury",
-        "sports",
-        "electric",
-        "business",
-        "automotive",
-        "portfolio",
-        "services"
-      ],
-      "author": "arsh0coder",
-      "previewImage": "./arkiv/Elite-Motors/assets/1.png",
-      "liveUrl": "Elite-Motors/index.html",
-      "sourceUrl": "https://github.com/NORGINSA/Elite-Motors",
-      "license": "MIT",
-      "created": "2025-09-06",
-      "featured": true,
-      "category": "Business",
-      "difficulty": "Intermediate",
-      "techStack": [
-        "HTML",
-        "Tailwind CSS",
-        "Font Awesome",
-        "Vanilla JS",
-        "Google Fonts"
-      ]
+      "featured": false
     }
   ]
 }

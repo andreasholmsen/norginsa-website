@@ -52,7 +52,7 @@
 
   <section class="text-center py-12 bg-red-600 text-white">
     <h1 class="text-4xl font-bold mb-2">Søk i Arkivet</h1>
-    <p class="text-lg">Finn alt fra gamle studenthistorier ogtips til første skoledag til de snodigste tradisjonene i Toulouse!</p>
+    <p class="text-lg">Finn alt fra gamle studenthistorier og tips til første skoledag til de snodigste tradisjonene i Toulouse!</p>
   </section>
 
   <!-- Main 2-column Layout -->
@@ -65,21 +65,10 @@
       <div id="tagFilters" class="flex flex-wrap gap-2 mb-4"></div>
       <select id="authorFilter"
         class="mb-2 px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800">
-        <option value="">Skrevet av</option>
+        <option value="">Alle forfattere</option>
       </select>
-      <select id="licenseFilter"
-        class="mb-2 px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800">
-        <option value="">All Licenses</option>
       </select>
-      <select id="categoryFilter"
-        class="mb-2 px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800">
-        <option value="">All Categories</option>
-      </select>
-      <select id="difficultyFilter"
-        class="mb-2 px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800">
-        <option value="">All Difficulties</option>
-      </select>
-      <input type="text" id="searchInput" placeholder="Search templates..."
+      <input type="text" id="searchInput" placeholder="Søk artikkel..."
         class="mb-2 px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800" />
       <button id="applyFiltersBtn"
         class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition font-semibold shadow">
@@ -113,32 +102,20 @@
     class="fixed z-50 left-0 right-0 bottom-0 bg-white dark:bg-gray-900 rounded-t-2xl border-t border-gray-200 dark:border-gray-800 shadow-2xl p-4 transition duration-300 transform mobile-filter-enter"
     style="display:none;">
     <div class="flex items-center justify-between mb-1">
-      <span class="font-semibold text-lg">Filters</span>
+      <span class="font-semibold text-lg">Filtere</span>
       <button id="closeMobileFilterDrawer"
         class="text-2xl p-2 text-gray-500 hover:text-gray-800 focus:outline-none">×</button>
     </div>
     <div id="mobileTagFilters" class="flex flex-wrap gap-2 mb-2"></div>
     <select id="mobileAuthorFilter"
       class="mb-2 w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800">
-      <option value="">All Authors</option>
+      <option value="">Alle forfattere</option>
     </select>
-    <select id="mobileLicenseFilter"
-      class="mb-2 w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800">
-      <option value="">All Licenses</option>
-    </select>
-    <select id="mobileCategoryFilter"
-      class="mb-2 w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800">
-      <option value="">All Categories</option>
-    </select>
-    <select id="mobileDifficultyFilter"
-      class="mb-2 w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800">
-      <option value="">All Difficulties</option>
-    </select>
-    <input type="text" id="mobileSearchInput" placeholder="Search templates..."
+    <input type="text" id="mobileSearchInput" placeholder="Søk artikkel..."
       class="mb-2 px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 w-full" />
     <button id="mobileApplyFiltersBtn"
       class="mt-3 w-full bg-red-600 text-white px-4 py-3 rounded-md text-lg font-bold hover:bg-red-700 shadow transition">
-      Apply Filter
+      Bruk Filter
     </button>
   </div>
 
@@ -188,9 +165,6 @@
         templates = data.templates;
         const uniqueTags = [...new Set(templates.flatMap(t => t.tags))];
         const uniqueAuthors = [...new Set(templates.map(t => t.author))];
-        const uniqueLicenses = [...new Set(templates.map(t => t.license))];
-        const uniqueCategories = [...new Set(templates.map(t => t.category))];
-        const uniqueDifficulties = [...new Set(templates.map(t => t.difficulty))];
 
         // Populate desktop tag buttons
         const tagFilters = document.getElementById("tagFilters");
@@ -204,13 +178,7 @@
 
         // Populate dropdowns (desktop and mobile)
         const authorFilter = document.getElementById("authorFilter");
-        const licenseFilter = document.getElementById("licenseFilter");
-        const categoryFilter = document.getElementById("categoryFilter");
-        const difficultyFilter = document.getElementById("difficultyFilter");
         const mobileAuthorFilter = document.getElementById("mobileAuthorFilter");
-        const mobileLicenseFilter = document.getElementById("mobileLicenseFilter");
-        const mobileCategoryFilter = document.getElementById("mobileCategoryFilter");
-        const mobileDifficultyFilter = document.getElementById("mobileDifficultyFilter");
 
         uniqueAuthors.forEach(author => {
           const opt = document.createElement("option");
@@ -218,27 +186,6 @@
           opt.innerText = author;
           authorFilter.appendChild(opt);
           mobileAuthorFilter.appendChild(opt.cloneNode(true));
-        });
-        uniqueLicenses.forEach(license => {
-          const opt = document.createElement("option");
-          opt.value = license;
-          opt.innerText = license;
-          licenseFilter.appendChild(opt);
-          mobileLicenseFilter.appendChild(opt.cloneNode(true));
-        });
-        uniqueCategories.forEach(category => {
-          const opt = document.createElement("option");
-          opt.value = category;
-          opt.innerText = category;
-          categoryFilter.appendChild(opt);
-          mobileCategoryFilter.appendChild(opt.cloneNode(true));
-        });
-        uniqueDifficulties.forEach(diff => {
-          const opt = document.createElement("option");
-          opt.value = diff;
-          opt.innerText = diff;
-          difficultyFilter.appendChild(opt);
-          mobileDifficultyFilter.appendChild(opt.cloneNode(true));
         });
 
         // Mobile tag buttons
@@ -284,9 +231,6 @@
         // Sync mobile to desktop inputs
         function syncMobileFiltersToDesktop() {
           authorFilter.value = mobileAuthorFilter.value;
-          licenseFilter.value = mobileLicenseFilter.value;
-          categoryFilter.value = mobileCategoryFilter.value;
-          difficultyFilter.value = mobileDifficultyFilter.value;
           document.getElementById("searchInput").value = document.getElementById("mobileSearchInput").value;
           activeTags = mobileActiveTags.slice();
         }
@@ -294,9 +238,6 @@
         // Sync desktop to mobile inputs
         function syncDesktopFiltersToMobile() {
           mobileAuthorFilter.value = authorFilter.value;
-          mobileLicenseFilter.value = licenseFilter.value;
-          mobileCategoryFilter.value = categoryFilter.value;
-          mobileDifficultyFilter.value = difficultyFilter.value;
           document.getElementById("mobileSearchInput").value = document.getElementById("searchInput").value;
           mobileActiveTags = activeTags.slice();
           updateMobileTagFilterUI();
@@ -305,19 +246,13 @@
         // Filter and render functions
         function getPageTemplates(data) {
           const selectedAuthor = authorFilter.value;
-          const selectedLicense = licenseFilter.value;
-          const selectedCategory = categoryFilter.value;
-          const selectedDifficulty = difficultyFilter.value;
           const searchQuery = document.getElementById("searchInput").value.trim().toLowerCase();
 
           return data.filter(template => {
             const tagMatch = activeTags.length === 0 || activeTags.every(tag => template.tags.includes(tag));
             const authorMatch = !selectedAuthor || template.author === selectedAuthor;
-            const licenseMatch = !selectedLicense || template.license === selectedLicense;
-            const categoryMatch = !selectedCategory || template.category === selectedCategory;
-            const difficultyMatch = !selectedDifficulty || template.difficulty === selectedDifficulty;
             const searchMatch = template.name.toLowerCase().includes(searchQuery) || template.description.toLowerCase().includes(searchQuery);
-            return tagMatch && authorMatch && licenseMatch && categoryMatch && difficultyMatch && searchMatch;
+            return tagMatch && authorMatch && searchMatch;
           }).slice(0, currentPage * pageSize);
         }
 
@@ -342,10 +277,7 @@
                   ${t.tags.map(tag => `<span class="bg-red-100 text-red-700 dark:bg-red-700 dark:text-white px-2 py-1 rounded">${tag}</span>`).join("")}
                 </div>
                 <div class="text-xs text-gray-500 dark:text-gray-400 mb-3">
-                  By <strong>${t.author}</strong> · ${t.created} · ${t.category} · ${t.difficulty}
-                </div>
-                <div class="text-xs text-gray-500 dark:text-gray-400 mb-3">
-                  Tech: ${t.techStack.join(", ")}
+                  By <strong>${t.author}</strong> · ${t.created}
                 </div>
                 <div class="flex gap-3">
                   <a href="arkiv-details.html?id=${t.folder}" target="_blank"
