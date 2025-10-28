@@ -9,7 +9,6 @@ const details = {
   tags: document.getElementById("tags"),
   image: document.getElementById("previewImage"),
   meta: document.getElementById("metaInfo"),
-  tech: document.getElementById("techStack"),
   live: document.getElementById("liveLink"),
   source: document.getElementById("sourceLink"),
 };
@@ -44,13 +43,8 @@ fetch(`arkiv/${folder}/templates.json`)
 
     details.meta.innerHTML = `
       <strong>Author:</strong> ${template.author} ·
-      <strong>License:</strong> ${template.license} ·
-      <strong>Category:</strong> ${template.category} ·
-      <strong>Difficulty:</strong> ${template.difficulty} ·
       <strong>Created:</strong> ${template.created}
     `;
-
-    details.tech.innerHTML = `<strong>Tech Stack:</strong> ${template.techStack.join(", ")}`;
 
     details.live.href = template.liveUrl || "#";
     details.source.href = template.sourceUrl || "#";
