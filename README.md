@@ -1,40 +1,32 @@
 
 # NORGINSA – Nettside
 
-### Template stjålet fra https://github.com/x01-open-source/NORGINSA
-
-- Arkiv lagret i `arkiv/<template-folder>` med `metadata.json`
-
 ## 🧱 Prosjektstruktur
 
 ```bash
 .
-├── index.html                # Homepage - showcase of templates
+├── index.html                # Hjemmeside
+├── about.html                # Om NORGINSA siden
+├── kontakt.html              # Kontaktside
+├── arkiv.html                # Arkivside
 ├── assets/
-│   ├── css/style.css         # Optional custom styles
-│   ├── images/               # Preview images
+│   └── css/                  # Lokal CSS
+│       ├── style.css         # Ekstra CSS hvis nødvendig
+│       ├── navbar.css        # Ekstra CSS hvis nødvendig
+│   ├── images/               # Alt av bilder utenom bilder i artikler
 │   └── js/                   # Scripts
-│       ├── main.js           # Loads cards from templates.json
-│       ├── detail.js         # Handles arkiv-details.html
-│       └── nav_footer_loader.js # Injects navbar/footer
-├── components/
-│   ├── navbar.html
-│   └── footer.html
-├── pages/
-│   ├── arkiv.html        # Full templates listing
-│   ├── arkiv-details.html# Dynamic detail view
-│   └── about.html
+│       ├── getFooter.js      # genererer footer
+│       ├── getNavbar.js      # generer navbar
+│       └── navbar.js         # ekstra navbar script (animasjoner etc.)
 └── arkiv/
-    ├── templates.json        # Her man putter inn artikler eller egne sider tenkte jeg
-    ├── business-landing/
-    │   ├── metadata.json
-    │   └── assets/images/
+    ├── templates.json        # Her man putter inn egne sider og artikler
+    ├── eksempel-side1/       # inneholder alt av html filer etc.
+    │   ├── metadata.json     # fylles inn med eksemplet under
+    │   └── assets/images/    # bilder spesifikke til artikler
     │       └── bg.jpg
-    └── portfolio-site/
-        └── metadata.json
 ````
 
-### ✅ Example `metadata.json`:
+### ✅ Eksempel `metadata.json`:
 
 ```json
 {
@@ -42,15 +34,7 @@
   "description": "Modern startup landing page with CTA, features, and testimonials.",
   "author": "Sana J.",
   "created": "2025-07-01",
-  "license": "Apache-2.0",
   "tags": ["startup", "landing", "marketing", "business"],
-  "technologies": ["HTML", "Tailwind CSS", "Alpine.js"],
-  "features": [
-    "Call-to-action banner",
-    "Testimonial carousel",
-    "Responsive hero section",
-    "Sticky navigation"
-  ],
   "previewImage": "assets/images/bg.jpg",
   "images": [
     "assets/images/ui2.jpg",
@@ -68,10 +52,12 @@
 ```
 ---
 
-## 📚 Technologies Used
+## 📚 Teknologier Brukt
 
 * **HTML5**
 * **Tailwind CSS**
 * **JavaScript (Vanilla)**
-* **Alpine.js** (optional per template)
-* **JSON** for dynamic metadata loading
+* **JSON** for å dynamisk laste inn data
+
+
+### Template stjålet fra https://github.com/x01-open-source/NORGINSA
