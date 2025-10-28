@@ -7,7 +7,7 @@ function getNavbarHTML() {
     <div class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
       <div class="flex justify-between items-center py-3 sm:py-4">
         <!-- Brand / Logo -->
-        <a
+        <a href="index.html"
           class="flex items-center gap-1.5 sm:gap-2 text-xl sm:text-2xl font-extrabold text-red-600 hover:text-red-700 transition tracking-tight select-none"
           aria-label="Go to homepage">
           <span>NORGINSA</span>
@@ -69,7 +69,7 @@ function getNavbarHTML() {
     transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col md:hidden
     overflow-y-auto backdrop-blur-md" aria-label="Mobile sidebar navigation" tabindex="-1" style="padding:0.75rem 0.9rem;">
       <div class="flex items-center justify-between mb-3">
-        <span class="text-lg sm:text-xl font-bold text-red-600">NORGINSA</span>
+        <span href="index.html" class="text-lg sm:text-xl font-bold text-red-600">NORGINSA</span>
         <button id="sidebarCloseBtn" aria-label="Close Menu"
           class="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-red-500">
           <svg class="w-5 h-5 text-gray-900 dark:text-gray-200" fill="none" stroke="currentColor" stroke-width="2"
