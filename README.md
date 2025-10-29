@@ -71,29 +71,22 @@ Hva som mangler:
     │       └── alle_andre_bilder.jpg
 ````
 
-### ✅ Eksempel `metadata.json`:
+### ✅ Eksempel på artikkel i  `templates.json`:
 
 ```json
 {
-  "name": "Business Landing Page",
-  "description": "Modern startup landing page with CTA, features, and testimonials.",
-  "author": "Sana J.",
-  "created": "2025-07-01",
-  "tags": ["startup", "landing", "marketing", "business"],
-  "previewImage": "assets/images/bg.jpg",
-  "images": [
-    "assets/images/ui2.jpg",
-    "assets/images/bg.jpg"
-  ],
-  "liveUrl": "index.html",
-  "sourceUrl": "https://github.com/NORGINSA/business-landing",
-  "sections": [
-    { "id": "hero", "title": "Hero" },
-    { "id": "features", "title": "Features" },
-    { "id": "testimonials", "title": "Testimonials" },
-    { "id": "cta", "title": "Call to Action" }
-  ]
-}
+      "name": "NoTail",
+      "description": "Et ellevillt barprosjekt i en promololeilighet",
+      "folder": "notail",
+      "tags": [
+        "Studenthistorier"
+      ],
+      "author": "Andreas Holmsen",
+      "previewImage": "arkiv/notail/images/2.JPG",
+      "liveUrl": "arkiv/notail/notail.html",
+      "created": "2024-06-08",
+      "featured": true
+    },
 ```
 ---
 
