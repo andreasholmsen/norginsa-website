@@ -47,7 +47,6 @@ fetch(`arkiv/${folder}/templates.json`)
     `;
 
     details.live.href = template.liveUrl || "#";
-    details.source.href = template.sourceUrl || "#";
   })
   .catch(err => {
     console.error(err);

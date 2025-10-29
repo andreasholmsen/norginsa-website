@@ -1,5 +1,18 @@
 {
   "templates": [
+     {
+      "name": "NoTail",
+      "description": "Et ellevillt barprosjekt i en promololeilighet",
+      "folder": "notail",
+      "tags": [
+        "Studenthistorier"
+      ],
+      "author": "Andreas Holmsen",
+      "previewImage": "arkiv/notail/images/2.JPG",
+      "liveUrl": "arkiv/notail/notail.html",
+      "created": "2024-06-08",
+      "featured": true
+    },
     {
       "name": "Artikkel #1",
       "description": "Kort introduksjon",
@@ -11,7 +24,6 @@
       "author": "Andreas Holmsen",
       "previewImage": "assets/images/artikkel1/artikkel1preview.jpg",
       "liveUrl": "arkiv/portfolio-site/index.html",
-      "sourceUrl": "https://github.com/NORGINSA/portfolio-site",
       "created": "2025-06-15",
       "featured": true
     },
@@ -25,7 +37,6 @@
       "author": "Priya M.",
       "previewImage": "assets/images/artikkel2/artikkel2preview.jpg",
       "liveUrl": "arkiv/business-landing/index.html",
-      "sourceUrl": "https://github.com/NORGINSA/business-landing",
       "created": "2025-06-20",
       "featured": false
     },
@@ -40,7 +51,6 @@
       "author": "Sami Codes",
       "previewImage": "assets/images/artikkel3/artikkel3preview.jpg",
       "liveUrl": "arkiv/personal-blog/index.html",
-      "sourceUrl": "https://github.com/NORGINSA/personal-blog",
       "created": "2025-07-01",
       "featured": false
     }
