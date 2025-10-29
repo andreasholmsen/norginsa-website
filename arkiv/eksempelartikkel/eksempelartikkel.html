@@ -7,53 +7,10 @@
   <title>ARTIKKELNAVN – NORGINSA</title>
 
   <!-- Tailwind + AOS CSS -->
-  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="../../assets/css/article.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script>
-    tailwind.config = { darkMode: 'class' };
-  </script>
-
-    <style>
-    /* Glowing effect for cards & buttons */
-    .glowing {
-      box-shadow: 0 16px 32px rgba(246, 59, 59, 0.16), 0 8px 8px rgba(246, 59, 59, 0.1);
-      transition: box-shadow 0.15s, transform 0.15s;
-    }
-
-    .glowing:hover,
-    .glowing:focus-visible {
-      box-shadow: 0 32px 64px rgba(246, 59, 59, 0.24), 0 16px 16px rgba(246, 59, 59, 0.12);
-      transform: translateY(-3px) scale(1.03);
-      outline-offset: 4px;
-      outline: none;
-    }
-
-    /* Fade down animation for sections */
-    .fade-down-anim {
-      animation: fadeDown 0.75s cubic-bezier(.77, 0, .175, 1) forwards;
-    }
-
-    @keyframes fadeDown {
-      from {
-        transform: translateY(-20px);
-        opacity: 0;
-      }
-
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    /* Floating theme toggle button fixed position */
-    #themeToggleBtn {
-      position: fixed;
-      bottom: 1.5rem;
-      right: 1.5rem;
-      z-index: 9999;
-    }
-  </style>
+  <script>tailwind.config = { darkMode: 'class' }</script>
 </head>
 
 <body
@@ -62,12 +19,8 @@
   <!-- Navbar -->
   <div id="navbar"></div>
   <script src="../getNavbar.js"></script>
-  <script>
-    // Call the function and insert into DOM
-    document.getElementById("navbar").innerHTML = getNavbarHTML();
-  </script>
+  <script>document.getElementById("navbar").innerHTML = getNavbarHTML();</script>
   <script src="../../assets/js/navbar.js"></script>
-  <div class="pt-24"></div>
 
 
 <!-- ======= TITTEL ======= -->
@@ -91,8 +44,8 @@
 <!-- ======= ARTIKKELBILDE MED TEKST PÅ HØYRE SIDE ======= -->
 <div class="fade-down-anim max-w-4xl mx-auto my-12 flex flex-col md:flex-row items-center md:items-start gap-8">
     <div class="md:w-1/2 w-full">
-       <a href="images/1.JPG" target="_blank" rel="noopener">
-            <img class="fade-down-anim w-full h-auto rounded-lg shadow glowing" src="images/1.JPG" alt="Article image">
+       <a href="images/5.jpg" target="_blank" rel="noopener">
+            <img class="fade-down-anim w-full h-auto rounded-lg shadow glowing" src="images/5.jpg" alt="Article image">
         </a>
     </div>
     <div class="md:w-1/2 w-full">
@@ -118,8 +71,8 @@
         </p>
     </div>
     <div class="md:w-1/2 w-full order-1 md:order-2">
-        <a href="images/1.JPG" target="_blank" rel="noopener">
-            <img class="fade-down-anim w-full h-auto rounded-lg shadow glowing" src="images/2.JPG" alt="Article image">
+        <a href="images/6.jpg" target="_blank" rel="noopener">
+            <img class="fade-down-anim w-full h-auto rounded-lg shadow glowing" src="images/6.jpg" alt="Article image">
         </a>
     </div>
 </div>
@@ -130,27 +83,48 @@
         <h2 class="text-2xl font-bold mb-4">Bildeboks med fire bilder</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div>
-                <a href="images/1.JPG" target="_blank" rel="noopener">
-                    <img src="images/1.JPG" alt="Bilde 1" class="w-full h-40 object-cover rounded-lg shadow glowing" />
+                <a href="images/1.jpg" target="_blank" rel="noopener">
+                    <img src="images/1.jpg" alt="Bilde 1" class="w-full h-40 object-cover rounded-lg shadow glowing" />
                 </a>
             </div>
             <div>
-                <a href="images/2.JPG" target="_blank" rel="noopener">
-                    <img src="images/2.JPG" alt="Bilde 2" class="w-full h-40 object-cover rounded-lg shadow glowing" />
+                <a href="images/2.jpg" target="_blank" rel="noopener">
+                    <img src="images/2.jpg" alt="Bilde 2" class="w-full h-40 object-cover rounded-lg shadow glowing" />
                 </a>
             </div>
             <div>
-                <a href="images/1.JPG" target="_blank" rel="noopener">
-                    <img src="images/1.JPG" alt="Bilde 3" class="w-full h-40 object-cover rounded-lg shadow glowing" />
+                <a href="images/3.jpg" target="_blank" rel="noopener">
+                    <img src="images/3.jpg" alt="Bilde 3" class="w-full h-40 object-cover rounded-lg shadow glowing" />
                 </a>
             </div>
             <div>
-                <a href="images/2.JPG" target="_blank" rel="noopener">
-                    <img src="images/2.JPG" alt="Bilde 4" class="w-full h-40 object-cover rounded-lg shadow glowing" />
+                <a href="images/4.jpg" target="_blank" rel="noopener">
+                    <img src="images/4.jpg" alt="Bilde 4" class="w-full h-40 object-cover rounded-lg shadow glowing" />
                 </a>
             </div>
         </div>
     </div>
+
+
+
+
+<!-- ======= Bilder med popup/slideshow ======= -->
+<!--OBS!! Begrenset til én per artikkel-->
+<div id="slideShowModal"></div>
+<div class="my-12 fade-down-anim max-w-4xl mx-auto">
+  <h2 class="text-2xl font-bold mb-4">Bildeboks med fire bilder (popup/slideshow)</h2>
+  <div id="slideshowGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+<script>
+  const slideshowImages = [
+    "images/1.jpg",
+    "images/2.jpg",
+    "images/3.jpg",
+    "images/4.jpg"
+  ];
+</script>
+<script src="../../assets/js/slideshow.js"></script>
+<script>document.getElementById("slideShowModal").innerHTML = getSlideshowPopup()</script>
+</div>
 
 <!-- ======= HELT VANLIG AVSNITT ======= -->
 <div class="fade-down-anim max-w-4xl mx-auto my-12">
@@ -159,26 +133,31 @@
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque possimus exercitationem, dignissimos soluta blanditiis rem? Quidem enim architecto ducimus necessitatibus veniam non sunt, error quos dolore doloribus sapiente nisi?
     </p>
 
+    <!-- Liste uten orden-->
     <ul class="list-disc list-inside pl-8 space-y-2 mt-4">
         <li>Første punkt</li>
         <li>Andre punkt</li>
         <li>Tredje punkt</li>
     </ul>
 
+    <!-- Enumerert liste-->
     <ol class="list-decimal list-inside pl-8 space-y-2 mt-4 mb-4">
         <li>Første punkt</li>
         <li>Andre punkt</li>
         <li>Tredje punkt</li>
     </ol>
 
+    <!-- Forskjellige tekstformateringer-->
     <p><b>Fet skrift</b>, <i>kursiv</i>, <u>understreket</u></p>
 
     <!--mellomrom-->
     <br>
 
+    <!-- Tekst med lenke-->
     <p>Her er tekst <a href="https://www.youtube.com/watch?v=PaPN51Mm5qQ" class="text-red-600 hover:text-red-800" target="_blank" rel="noopener">som inneholder en lenke</a>!</p>
 </div>
 
+<!--Embedded video-->
 <div class="fade-down-anim max-w-4xl mx-auto my-12">
     <p>Her er den samme video-lenken, men embedded:</p>
     <div class="my-8 flex justify-center">
@@ -203,58 +182,19 @@
 </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <!-- Footer Container -->
-   <div id="footer"></div>
+  <div id="footer"></div>
   <script src="../../assets/js/getFooter.js"></script>
-  <script>
-    // Call the function and insert into DOM
-    document.getElementById("footer").innerHTML = getFooterHTML();
-  </script>
-
-
+  <script>document.getElementById("footer").innerHTML = getFooterHTML();</script>
 
   <!-- Floating Theme Toggle Button -->
-  <button id="themeToggleBtn"
-    class="floating-btn bg-gradient-to-r from-red-600 to-rose-500 dark:from-gray-700 dark:to-gray-800 text-white p-3 rounded-full shadow-xl hover:scale-110 focus:outline-none duration-200"
-    title="Toggle Theme" aria-label="Toggle Theme">
-    <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24"
-      stroke="currentColor" aria-hidden="true">
-      <circle cx="12" cy="12" r="5" stroke-width="2" />
-      <path stroke-linecap="round" stroke-width="2"
-        d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M16.36 16.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M16.36 7.64l1.42-1.42" />
-    </svg>
-    <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block" fill="none" viewBox="0 0 24 24"
-      stroke="currentColor" aria-hidden="true">
-      <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        d="M21 12.79A9 9 0 1111.21 3c.03 0 .06.01.09.01a7 7 0 0010.7 9.78z" />
-    </svg>
-  </button>
+  <div id="floatingButton"></div>
+  <script src="getFloatingButton.js"></script>
+  <script>document.getElementById("floatingButton").innerHTML = getFloatingButton();</script>
+
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
   <script src="../bunnscript.js"></script>
 </body>
 

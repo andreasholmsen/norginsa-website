@@ -10,21 +10,20 @@
       "author": "Andreas Holmsen",
       "previewImage": "arkiv/notail/images/2.JPG",
       "liveUrl": "arkiv/notail/notail.html",
-      "created": "2024-06-08",
+      "created": "08-06-2024",
       "featured": true
     },
     {
-      "name": "Artikkel #1",
+      "name": "eksempelartikkel",
       "description": "Kort introduksjon",
-      "folder": "portfolio-site",
+      "folder": "eksempelartikkel",
       "tags": [
-        "Studenthistorier",
-        "Tips & Triks"
+        "Annet"
       ],
       "author": "Andreas Holmsen",
-      "previewImage": "assets/images/artikkel1/artikkel1preview.jpg",
-      "liveUrl": "arkiv/portfolio-site/index.html",
-      "created": "2025-06-15",
+      "previewImage": "arkiv/eksempelartikkel/images/preview.jpg",
+      "liveUrl": "arkiv/eksempelartikkel/eksempelartikkel.html",
+      "created": "31-12-0000",
       "featured": true
     },
     {
