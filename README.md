@@ -10,7 +10,7 @@ Hva som mangler:
 - [ ] Passe på at tekstboksen i /arkiv.html er trygg og ikke kan ødelegge siden
 - [ ] Legge til bilde av alle studentene fra 17. Mai på hjemmesiden.
 - [ ] Generellt sett skrive om tekster til å bli bedre ved behov - spesielt teksten på hjemmesiden.
-- [ ] Fikse slik at bildet på hjemmesiden er like bredt som boksen rett over på desktop
+- [X] Fikse slik at bildet på hjemmesiden er like bredt som boksen rett over på desktop
 - [ ] Skrive masse artikler!
     - [ ] TEKNA-Toulouse
     - [ ] ANSA-Toulouse
