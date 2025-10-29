@@ -100,7 +100,7 @@ Hva som mangler:
   - `images/` - mappen som inneholder alle bildene
   - `images/preview.jpg` - et bilde til forhåndsvisning 
 
-### 2) Legg til et innlegg i `arkiv/arkiv.json` med info om filen:
+### 2) Legg til et innlegg i `arkiv/arkiv.json` med info om artikkelen:
 
 Legg til denne informasjonen
 
