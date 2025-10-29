@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   container.innerHTML = ''; // Clear container before loading
 
   try {
-    const res = await fetch("arkiv/templates.json");
+    const res = await fetch("arkiv/arkiv.json");
     const data = await res.json();
 
     // Show only top 3 templates (featured)
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       card.style.animationDelay = `${index * 150}ms`;
 
       card.innerHTML = `
-        <img src="${template.previewImage}" alt="${template.name} preview" loading="lazy" class="w-full h-56 object-cover rounded-t-2xl"/>
+        <img src="arkiv/${template.folder}/images/preview.jpg" alt="${template.name} preview" loading="lazy" class="w-full h-56 object-cover rounded-t-2xl"/>
         <div class="p-6 flex flex-col flex-grow">
           <h3 class="text-2xl font-extrabold text-gray-900 dark:text-gray-100 mb-3 line-clamp-2">${template.name}</h3>
           <p class="text-gray-700 dark:text-gray-300 text-sm mb-5 flex-grow line-clamp-3">${template.description}</p>
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             By <strong>${template.author}</strong> · ${template.created}
           </p>
           <div class="mt-auto space-y-3">
-            <a href="${template.liveUrl}" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-red-600 to-rose-500 hover:from-red-700 hover:to-rose-600 text-white text-center px-5 py-3 rounded-xl font-semibold shadow-lg transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-rose-400" aria-label="Explore ${template.name} live demo">
+            <a href="arkiv/${template.folder}/${template.folder}.html" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-red-600 to-rose-500 hover:from-red-700 hover:to-rose-600 text-white text-center px-5 py-3 rounded-xl font-semibold shadow-lg transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-rose-400" aria-label="Explore ${template.name}">
               Les mer
             </a>
           </div>

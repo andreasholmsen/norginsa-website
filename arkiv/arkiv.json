@@ -1,0 +1,26 @@
+{
+  "templates": [
+     {
+      "name": "NoTail",
+      "description": "Et ellevillt barprosjekt i en promololeilighet",
+      "folder": "notail",
+      "tags": [
+        "Studenthistorier"
+      ],
+      "author": "Andreas Holmsen",
+      "created": "08-06-2024",
+      "featured": true
+    },
+    {
+      "name": "eksempelartikkel",
+      "description": "Kort introduksjon",
+      "folder": "eksempelartikkel",
+      "tags": [
+        "Annet"
+      ],
+      "author": "Andreas Holmsen",
+      "created": "31-12-0000",
+      "featured": true
+    }
+  ]
+}
