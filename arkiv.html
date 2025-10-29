@@ -266,7 +266,7 @@
             const card = document.createElement("div");
             card.className = "bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition overflow-hidden";
             card.innerHTML = `
-              <img src="${t.previewImage}" alt="${t.name}" class="w-full h-48 object-cover rounded-t-lg" />
+              <img src="arkiv/${t.folder}/images/preview.jpg" alt="${t.name}" class="w-full h-48 object-cover rounded-t-lg" />
               <div class="p-4 flex flex-col h-full">
                 <div class="flex items-center justify-between mb-2">
                   <h3 class="text-xl font-bold">${t.name}</h3>
@@ -280,7 +280,7 @@
                   By <strong>${t.author}</strong> · ${t.created}
                 </div>
                 <div class="flex gap-3">
-                  <a href="${t.liveUrl}" target="_blank"
+                  <a href="arkiv/${t.name}/${t.name}.html" target="_blank"
                     class="flex-1 bg-gradient-to-r from-red-600 to-red-500 text-white text-center px-4 py-2 rounded-lg shadow-md hover:from-red-700 hover:to-red-600 transition-all duration-200">
                     Les mer
                   </a>

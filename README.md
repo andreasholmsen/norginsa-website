@@ -74,7 +74,7 @@ Hva som mangler:
 ### ✅ Eksempel på artikkel i  `arkiv.json`:
 
 ```json
-{
+ {
       "name": "NoTail",
       "description": "Et ellevillt barprosjekt i en promololeilighet",
       "folder": "notail",
@@ -82,9 +82,7 @@ Hva som mangler:
         "Studenthistorier"
       ],
       "author": "Andreas Holmsen",
-      "previewImage": "arkiv/notail/images/2.JPG",
-      "liveUrl": "arkiv/notail/notail.html",
-      "created": "2024-06-08",
+      "created": "08-06-2024",
       "featured": true
     },
 ```
@@ -105,7 +103,7 @@ Hva som mangler:
 Legg til denne informasjonen
 
 ```json
-    {
+     {
       "name": "NoTail",
       "description": "Et ellevillt barprosjekt i en promololeilighet",
       "folder": "notail",
@@ -113,9 +111,7 @@ Legg til denne informasjonen
         "Studenthistorier"
       ],
       "author": "Andreas Holmsen",
-      "previewImage": "arkiv/notail/images/2.JPG",
-      "liveUrl": "arkiv/notail/notail.html",
-      "created": "2024-06-08",
+      "created": "08-06-2024",
       "featured": true
     },
 ```
@@ -125,8 +121,6 @@ Legg til denne informasjonen
 - folder: mappenavnet
 - tags: Hva slags type innlegg det er
 - author: Hvem som har skrevet artikkelen
-- previewImage: Hva bildet til forhåndsvisning heter
-- liveUrl: Filepath til filen.
 - created: Dato i format DD-MM-ÅÅÅÅ
 - featured: true/false, om artikkelen er featured eller ikke
 
