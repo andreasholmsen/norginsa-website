@@ -63,7 +63,7 @@ Hva som mangler:
 │       ├── getNavbar.js        # generer navbar
 │       └── navbar.js           # ekstra navbar script (animasjoner etc.)
 └── arkiv/
-    ├── templates.json          # Her man putter inn egne sider og artikler
+    ├── arkiv.json          # Her man putter inn egne sider og artikler
     ├── eksempel-side1/         # inneholder alt av html filer etc.
     │   ├── eksempel-side1.html # fylles inn med eksemplet under
     │   └── images/             # bilder spesifikke til artiklen
@@ -71,7 +71,7 @@ Hva som mangler:
     │       └── alle_andre_bilder.jpg
 ````
 
-### ✅ Eksempel på artikkel i  `templates.json`:
+### ✅ Eksempel på artikkel i  `arkiv.json`:
 
 ```json
 {
@@ -93,7 +93,46 @@ Hva som mangler:
 # Hvordan skrive en artikkel
 
 
-### 3) Lag en `artikkelnavn.html` og fyll inn dette:
+### 1) Lag en ny mappe `artikkelnavn` som du skal putte inn i `arkiv` senere
+
+  **Lag disse filene:**
+  - `artikkelnavn.html` - filen som inneholder all HTML (selve teksten)
+  - `images/` - mappen som inneholder alle bildene
+  - `images/preview.jpg` - et bilde til forhåndsvisning 
+
+### 2) Legg til et innlegg i `arkiv/arkiv.json` med info om filen:
+
+Legg til denne informasjonen
+
+```json
+    {
+      "name": "NoTail",
+      "description": "Et ellevillt barprosjekt i en promololeilighet",
+      "folder": "notail",
+      "tags": [
+        "Studenthistorier"
+      ],
+      "author": "Andreas Holmsen",
+      "previewImage": "arkiv/notail/images/2.JPG",
+      "liveUrl": "arkiv/notail/notail.html",
+      "created": "2024-06-08",
+      "featured": true
+    },
+```
+
+- name: Tittel på artikkelen
+- description: Kort beskrivelse
+- folder: mappenavnet
+- tags: Hva slags type innlegg det er
+- author: Hvem som har skrevet artikkelen
+- previewImage: Hva bildet til forhåndsvisning heter
+- liveUrl: Filepath til filen.
+- created: Dato i format DD-MM-ÅÅÅÅ
+- featured: true/false, om artikkelen er featured eller ikke
+
+**HUSK! Riktig mengde komma. *Ikke komma for siste element i en liste***
+
+### 3) I `artikkelnavn.html`, fyll inn dette:
 
 
 
@@ -166,6 +205,9 @@ Hva som mangler:
     </html>
 ```
 
+Fortsett deretter med å fylle inn info og bilder osv.
+
+**TIPS! Sjekk ut `arkiv/eksempelartikkel/` for alle mulige formateringsmuligheter! Copy+Paste mulighetene er store**
 
 
 ## 📚 Teknologier Brukt
