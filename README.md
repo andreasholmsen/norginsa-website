@@ -132,6 +132,7 @@ Legg til denne informasjonen
 
 ```html
 
+    
     <!DOCTYPE html>
     <html lang="en" class="scroll-smooth">
 
@@ -152,8 +153,8 @@ Legg til denne informasjonen
 
       <!-- Navbar -->
       <div id="navbar"></div>
-      <script src="../getNavbar.js"></script>
-      <script>document.getElementById("navbar").innerHTML = getNavbarHTML();</script>
+      <script src="../../assets/js/getNavbar.js"></script>
+      <script>document.getElementById("navbar").innerHTML = getArtikkelNavbarHTML();</script>
       <script src="../../assets/js/navbar.js"></script>
 
 
