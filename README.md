@@ -14,6 +14,7 @@ Hva som mangler:
 - [ ] Skrive masse artikler!
     - [ ] TEKNA-Toulouse
     - [ ] ANSA-Toulouse
+    - [ ] NoTail
     - [ ] Søknadsprosessen
     - [ ] Førsteklasse
     - [ ] MIC
@@ -48,25 +49,26 @@ Hva som mangler:
 
 ```bash
 .
-├── index.html                # Hjemmeside
-├── about.html                # Om NORGINSA siden
-├── kontakt.html              # Kontaktside
-├── arkiv.html                # Arkivside
+├── index.html                  # Hjemmeside
+├── about.html                  # Om NORGINSA siden
+├── kontakt.html                # Kontaktside
+├── arkiv.html                  # Arkivside
 ├── assets/
-│   └── css/                  # Lokal CSS
-│       ├── style.css         # Ekstra CSS hvis nødvendig
-│       ├── navbar.css        # Ekstra CSS hvis nødvendig
-│   ├── images/               # Alt av bilder utenom bilder i artikler
-│   └── js/                   # Scripts
-│       ├── getFooter.js      # genererer footer
-│       ├── getNavbar.js      # generer navbar
-│       └── navbar.js         # ekstra navbar script (animasjoner etc.)
+│   └── css/                    # Lokal CSS
+│       ├── style.css           # Ekstra CSS hvis nødvendig
+│       ├── navbar.css          # Ekstra CSS hvis nødvendig
+│   ├── images/                 # Alt av bilder utenom bilder i artikler
+│   └── js/                     # Scripts
+│       ├── getFooter.js        # genererer footer
+│       ├── getNavbar.js        # generer navbar
+│       └── navbar.js           # ekstra navbar script (animasjoner etc.)
 └── arkiv/
-    ├── templates.json        # Her man putter inn egne sider og artikler
-    ├── eksempel-side1/       # inneholder alt av html filer etc.
-    │   ├── metadata.json     # fylles inn med eksemplet under
-    │   └── assets/images/    # bilder spesifikke til artikler
-    │       └── bg.jpg
+    ├── templates.json          # Her man putter inn egne sider og artikler
+    ├── eksempel-side1/         # inneholder alt av html filer etc.
+    │   ├── eksempel-side1.html # fylles inn med eksemplet under
+    │   └── images/             # bilder spesifikke til artiklen
+    │       └── preview.jpg     # Preview bildet
+    │       └── alle_andre_bilder.jpg
 ````
 
 ### ✅ Eksempel `metadata.json`:
