@@ -18,10 +18,10 @@ if (!folder) {
   throw new Error("Missing folder parameter.");
 }
 
-fetch(`arkiv/${folder}/templates.json`)
+fetch(`arkiv/${folder}/arkiv.json`)
   .then(res => {
     if (!res.ok) {
-      throw new Error("Failed to fetch templates.json");
+      throw new Error("Failed to fetch arkiv.json");
     }
     return res.json();
   })

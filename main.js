@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   container.innerHTML = ''; // Clear container before loading
 
   try {
-    const res = await fetch("arkiv/templates.json");
+    const res = await fetch("arkiv/arkiv.json");
     const data = await res.json();
 
     // Show only top 3 templates (featured)
