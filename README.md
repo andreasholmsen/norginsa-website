@@ -175,11 +175,14 @@ Legg til denne informasjonen
         </div>
       </section>
 
-    <!-- Legg til ting her!!-->
+    
+    
+  <div class="mx-2 md:mx-0">
+    <!-- Legg til ting inni her!!-->
 
+    
+  </div>
 
-    </div>
-    </div>
 
       <!-- Footer Container -->
       <div id="footer"></div>
