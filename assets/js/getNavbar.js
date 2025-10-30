@@ -26,7 +26,7 @@ function getNavbarHTML() {
           </a>
           <a href="kontakt.html" rel="noopener"
             class="px-2 py-1 rounded transition hover:text-red-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-red-400 text-gray-700 dark:text-gray-100 flex items-center gap-1 text-sm sm:text-base">
-            Kontakt Oss
+            Kontakt oss
           </a>
           <a href="https://utdanning.no/tema/utdanning_i_utlandet/ingeniorstudier_i_toulouse"  rel="noopener"
             class="ml-2 bg-gradient-to-r from-red-600 to-rose-500 text-white px-4 sm:px-5 py-1.5 sm:py-2 rounded-lg shadow hover:from-red-700 hover:to-rose-600 font-semibold transition duration-200 flex items-center gap-1 sm:gap-2 focus:outline-none focus:ring-2 focus:ring-red-300 text-sm sm:text-base">
@@ -85,7 +85,7 @@ function getNavbarHTML() {
         <a href="about.html"
           class="block px-3 py-1.5 rounded hover:bg-red-100 dark:hover:bg-gray-700 text-sm">Om NORGINSA</a>
           <a href="kontakt.html"
-          class="block px-3 py-1.5 rounded hover:bg-red-100 dark:hover:bg-gray-700 text-sm">Kontakt Oss</a>
+          class="block px-3 py-1.5 rounded hover:bg-red-100 dark:hover:bg-gray-700 text-sm">Kontakt oss</a>
           <a href="https://wiki.etud.insa-toulouse.fr/books/1a/page/besta-ditt-forste-norginsa-ar-starter-pack"
           class="block px-3 py-1.5 rounded hover:bg-red-100 dark:hover:bg-gray-700 text-sm">Wiki</a>
         <a href="https://utdanning.no/tema/utdanning_i_utlandet/ingeniorstudier_i_toulouse"  rel="noopener"
@@ -110,8 +110,6 @@ function getNavbarHTML() {
     </nav>
   </header>
   `}
-
-
 
 function getArtikkelNavbarHTML() {
   return `
@@ -173,12 +171,10 @@ function getArtikkelNavbarHTML() {
         </div>
       </div>
     </div>
-
     <!-- Sidebar Overlay -->
     <div id="sidebarOverlay"
       class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity md:hidden">
     </div>
-
     <!-- Mobile Sidebar -->
     <nav id="mobileSidebar" class="fixed top-0 left-0 h-full min-h-screen w-[90vw] max-w-xs min-w-[240px] bg-white dark:bg-gray-900 border-r border-red-100/30 dark:border-gray-800/70 shadow-lg z-50
     transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col md:hidden
