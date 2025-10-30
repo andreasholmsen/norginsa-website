@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const card = document.createElement("article");
       card.setAttribute("tabindex", "0");
       card.className =
-        "bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-red-400 dark:focus:ring-red-600 flex flex-col overflow-hidden max-w-sm mx-auto opacity-0 animate-fadeIn";
+        "bg-white dark:bg-gray-800 rounded-2xl shadow-md flex flex-col overflow-hidden w-full";
       card.style.animationDelay = `${index * 150}ms`;
 
       card.innerHTML = `

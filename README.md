@@ -3,7 +3,7 @@
 
 Hva som mangler:
 
-- [ ] Fikse visning av "featured articles" på hjemmesiden på mobil - på visse enheter fungerer det ikke.
+- [X] Fikse visning av "featured articles" på hjemmesiden på mobil - på visse enheter fungerer det ikke.
 - [ ] Legge til oppsummering av NORGINSA-programmet på /about.html siden
 - [ ] Legge til bidragsytere på /about.html siden (utifra hvor mange som faktisk bidrar til siden)
 - [ ] Fikse tags i /arkiv.html, slik at man kan sortere etter artikler som inneholder tags
@@ -14,7 +14,7 @@ Hva som mangler:
 - [ ] Skrive masse artikler!
     - [ ] TEKNA-Toulouse
     - [ ] ANSA-Toulouse
-    - [ ] NoTail
+    - [X] NoTail
     - [ ] Søknadsprosessen
     - [ ] Førsteklasse
     - [ ] MIC
