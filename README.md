@@ -9,7 +9,7 @@ Hva som mangler:
 - [X] Fikse tags i /arkiv.html, slik at man kan sortere etter artikler som inneholder tags
 - [ ] Passe på at tekstboksen i /arkiv.html er trygg og ikke kan ødelegge siden
 - [ ] Legge til bilde av alle studentene fra 17. Mai på hjemmesiden.
-- [ ] Generellt sett skrive om tekster til å bli bedre ved behov - spesielt teksten på hjemmesiden.
+- [ ] Generelt sett skrive om tekster til å bli bedre ved behov - spesielt teksten på hjemmesiden.
 - [X] Fikse slik at bildet på hjemmesiden er like bredt som boksen rett over på desktop
 - [ ] Skrive masse artikler!
     - [ ] TEKNA-Toulouse
@@ -71,7 +71,7 @@ Hva som mangler:
     │       └── alle_andre_bilder.jpg
 ````
 
-### ✅ Eksempel på artikkel i  `arkiv.json`:
+### ✅ Eksempel på artikkel i  `arkiv/arkiv.json`:
 
 ```json
  {
@@ -91,12 +91,12 @@ Hva som mangler:
 # Hvordan skrive en artikkel
 
 
-### 1) Lag en ny mappe `artikkelnavn` som du skal putte inn i `arkiv` senere
+### 1) Lag en ny mappe `artikkelnavn/` som du skal putte inn i `arkiv/` senere
 
   **Lag disse filene:**
-  - `artikkelnavn.html` - filen som inneholder all HTML (selve teksten)
+  - `artikkelnavn.html` - filen som inneholder all HTML (selve teksten) **VIKTIG! filnavnet må være det samme som mappenavnet, inkludert store/små bokstaver**
   - `images/` - mappen som inneholder alle bildene
-  - `images/preview.jpg` - et bilde til forhåndsvisning 
+  - `images/preview.jpg` - et bilde til forhåndsvisning **VIKTIG! Filen må hete preview.jpg. ikke preview.JPG**
 
 ### 2) Legg til et innlegg i `arkiv/arkiv.json` med info om artikkelen:
 
@@ -104,15 +104,15 @@ Legg til denne informasjonen
 
 ```json
      {
-      "name": "NoTail",
-      "description": "Et ellevillt barprosjekt i en promololeilighet",
-      "folder": "notail",
+      "name": "[ARTIKKELNAVN]",
+      "description": "[BESKRIVELSE]",
+      "folder": "[MAPPENAVN OG FILNAVN]",
       "tags": [
-        "Studenthistorier"
+        "[TAGS DERE MENER PASSER GODT]"
       ],
-      "author": "Andreas Holmsen",
-      "created": "08-06-2024",
-      "featured": true
+      "author": "[Fornavn etternavn]",
+      "created": "DD-MM-ÅÅÅÅ",
+      "featured": [true/false]
     },
 ```
 
@@ -127,8 +127,6 @@ Legg til denne informasjonen
 **HUSK! Riktig mengde komma. *Ikke komma for siste element i en liste***
 
 ### 3) I `artikkelnavn.html`, fyll inn dette:
-
-
 
 ```html
 
@@ -178,9 +176,10 @@ Legg til denne informasjonen
     
     
   <div class="mx-2 md:mx-0">
-    <!-- Legg til ting inni her!!-->
+    <!-- Legg til ting inni her!!
+        ta inspirasjon fra artikkel/eksempelartikkel/eksempelartikkel.html
+-->
 
-    
   </div>
 
 
