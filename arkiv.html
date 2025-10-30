@@ -62,7 +62,9 @@
     <aside id="sidebarFilters"
       class="hidden md:flex flex-col gap-4 w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 p-4 rounded-xl filter-scrollbar sticky-sidebar h-fit overflow-y-auto"
       style="min-width: 240px;">
-      <div id="tagFilters" class="flex flex-wrap gap-2 mb-4"></div>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <div id="tagFilters" class="flex flex-wrap gap-2"></div>
+      </div>
       <select id="authorFilter"
         class="mb-2 px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800">
         <option value="">Alle forfattere</option>
@@ -193,9 +195,13 @@
         function updateMobileTagFilterUI() {
           mobileTagFilters.innerHTML = "";
           uniqueTags.forEach(tag => {
+            const isActive = mobileActiveTags.includes(tag);
             const btn = document.createElement("button");
-            btn.className = 'tag-btn bg-red-100 text-red-700 dark:bg-red-800 dark:text-red-100 px-4 py-1 rounded-full text-sm hover:bg-red-200 dark:hover:bg-red-700 transition ' +
-              (mobileActiveTags.includes(tag) ? 'bg-red-600 text-white dark:bg-red-400 dark:text-gray-900' : '');
+            btn.className =
+              'tag-btn px-4 py-1 rounded-full text-sm transition ' +
+              (isActive
+                ? 'bg-red-600 text-white'
+                : 'bg-red-100 text-red-700 dark:bg-red-800 dark:text-red-100 hover:bg-red-200 dark:hover:bg-red-700');
             btn.dataset.tag = tag;
             btn.innerText = tag;
             mobileTagFilters.appendChild(btn);
@@ -207,13 +213,17 @@
         tagFilters.addEventListener("click", e => {
           if (e.target.classList.contains("tag-btn")) {
             const tag = e.target.dataset.tag;
-            e.target.classList.toggle("bg-red-600");
-            e.target.classList.toggle("text-white");
             if (activeTags.includes(tag)) {
+              // Deselect tag
               activeTags = activeTags.filter(t => t !== tag);
             } else {
+              // Select tag
               activeTags.push(tag);
             }
+            // Update button styles: highlight all selected tags
+            updateTagFilterUI();
+            // Do NOT re-render templates here!
+            // Filtering will happen when "Søk i arkivet" is clicked
           }
         });
         mobileTagFilters.addEventListener("click", e => {
@@ -296,6 +306,20 @@
           } else {
             loadMoreBtn.classList.remove("hidden");
           }
+        }
+
+        // Add this after you define tagFilters and activeTags
+        function updateTagFilterUI() {
+          Array.from(document.getElementById("tagFilters").children).forEach(btn => {
+            const tag = btn.dataset.tag;
+            if (activeTags.includes(tag)) {
+              btn.classList.add("bg-red-600", "text-white");
+              btn.classList.remove("bg-red-100", "text-red-700", "dark:bg-red-800", "dark:text-red-100");
+            } else {
+              btn.classList.remove("bg-red-600", "text-white");
+              btn.classList.add("bg-red-100", "text-red-700", "dark:bg-red-800", "dark:text-red-100");
+            }
+          });
         }
 
         // Event Listeners for Apply Filters and Load More
