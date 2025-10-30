@@ -214,5 +214,7 @@ Fortsett deretter med å fylle inn info og bilder osv.
 * **JavaScript (Vanilla)**
 * **JSON** for å dynamisk laste inn data
 
+#### Template stjålet fra https://github.com/x01-open-source/webhub
+
 
 ### Template stjålet fra https://github.com/x01-open-source/NORGINSA
