@@ -3,10 +3,10 @@
 
 Hva som mangler:
 
-- [ ] Fikse visning av "featured articles" på hjemmesiden på mobil - på visse enheter fungerer det ikke.
+- [X] Fikse visning av "featured articles" på hjemmesiden på mobil - på visse enheter fungerer det ikke.
 - [ ] Legge til oppsummering av NORGINSA-programmet på /about.html siden
 - [ ] Legge til bidragsytere på /about.html siden (utifra hvor mange som faktisk bidrar til siden)
-- [ ] Fikse tags i /arkiv.html, slik at man kan sortere etter artikler som inneholder tags
+- [X] Fikse tags i /arkiv.html, slik at man kan sortere etter artikler som inneholder tags
 - [ ] Passe på at tekstboksen i /arkiv.html er trygg og ikke kan ødelegge siden
 - [ ] Legge til bilde av alle studentene fra 17. Mai på hjemmesiden.
 - [ ] Generellt sett skrive om tekster til å bli bedre ved behov - spesielt teksten på hjemmesiden.
@@ -14,7 +14,7 @@ Hva som mangler:
 - [ ] Skrive masse artikler!
     - [ ] TEKNA-Toulouse
     - [ ] ANSA-Toulouse
-    - [ ] NoTail
+    - [X] NoTail
     - [ ] Søknadsprosessen
     - [ ] Førsteklasse
     - [ ] MIC
@@ -175,11 +175,14 @@ Legg til denne informasjonen
         </div>
       </section>
 
-    <!-- Legg til ting her!!-->
+    
+    
+  <div class="mx-2 md:mx-0">
+    <!-- Legg til ting inni her!!-->
 
+    
+  </div>
 
-    </div>
-    </div>
 
       <!-- Footer Container -->
       <div id="footer"></div>
